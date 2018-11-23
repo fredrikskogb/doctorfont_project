@@ -103,25 +103,8 @@ label {
     color: black;
 }
 
-/* Hero image in index.php*/
-/*
-.hero_image_frame{
-    height: 94.5vh;
-    margin: 0 auto;
-    background-color: #1C3045;
-}
-
-.hero_image_frame img{
-    /display: block;/
-    width: 50%;
-    height: auto;
-    margin: auto auto;
-    vertical-align: middle;
-}
-*/
-
 .hero_image_frame {
-    height: 94.5vh;      /* equals max image height */
+    height: 94.5vh;
     width: auto;
     white-space: nowrap;
     background-color: #1C3045;
@@ -134,13 +117,10 @@ label {
     vertical-align: middle;
 }
 
-img {
-    //background: #3A6F9A;
+.hero_image_frame img{
     vertical-align: middle;
     max-height: 1000px;
-    /*max-height: 25px;*/
     max-width: 600px;
-    /*max-width: 160px;*/
 }
 
 /* login_view */
