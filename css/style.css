@@ -1,3 +1,5 @@
+/* CSS reset */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,9 +44,63 @@ table {
 	border-spacing: 0;
 }
 
+/* General css */
+
 label {
     display: none;
 }
+
+/* navbar css */
+
+.navbar{
+    background-color: #D7BCC8;
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 1em 2em 0 2em;
+}
+
+.navbar_container{
+    height: auto;
+}
+
+.navbar_linklist{
+    display: flex;
+}
+
+.navbar_linklist li{
+    margin-right: 5em;
+}
+
+#navbar_logout_link{
+    float: right;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar_dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.navbar_dropdown_content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.navbar_dropdown:hover .navbar_dropdown_content {
+    display: block;
+}
+
+.navbar_linklist li a{
+    text-decoration: none;
+    color: black;
 
 /* login_view */
 
