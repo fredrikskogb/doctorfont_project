@@ -4,7 +4,7 @@
 •    När vi echoar i views så anväds <?= istället för echo
 •    Curly brakets öppnas på samma rad, förutom i classer
 •    Beautify/ autoindentering får ej användas!
-•    
+•    Använd REM på text och EM på margin och padding.
 KOMMENTARER I PHP
 •    vid en rad kommentars används //
 •    vid flera raders kommentar används /*
