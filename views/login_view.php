@@ -1,6 +1,7 @@
 <?php
 include '../includes/head.php';
 ?>
+<title>Millhouse - Logga in</title>
 <link rel="stylesheet" type="text/css" href="../includes/style.css">
 </head>
 <body>
