@@ -1,4 +1,5 @@
 /* CSS reset */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,6 +42,12 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* General css */
+
+label {
+    display: none;
 }
 
 /* navbar css */
@@ -94,4 +101,49 @@ table {
 .navbar_linklist li a{
     text-decoration: none;
     color: black;
+
+/* login_view */
+
+.body_view {
+    background-color: #1C3045;
+}
+
+.main_login_register {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+}
+
+.image_container {
+    margin: 0 auto;
+}
+
+.view_logo {
+    width: 30vw;
+}
+
+.form_container {
+    margin: 0 auto;
+}
+
+.form_views {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_views input {
+    margin: 0.5em;
+}
+
+.href_views {
+    color: #95B8D1;
+}
+
+.text_views {
+    color: white;
 }
