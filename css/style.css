@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+=======
+/* CSS reset */
+>>>>>>> 58a239d8efdc24876c0b5c5e1df344b45ff702fb
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -47,3 +51,108 @@ table {
 	border-spacing: 0;
 }
 
+/* General css */
+
+label {
+    display: none;
+}
+
+/* navbar css */
+
+.navbar{
+    background-color: #D7BCC8;
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 1em 2em 0 2em;
+}
+
+.navbar_container{
+    height: auto;
+}
+
+.navbar_linklist{
+    display: flex;
+}
+
+.navbar_linklist li{
+    margin-right: 5em;
+}
+
+#navbar_logout_link{
+    float: right;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar_dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.navbar_dropdown_content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.navbar_dropdown:hover .navbar_dropdown_content {
+    display: block;
+}
+
+.navbar_linklist li a{
+    text-decoration: none;
+    color: black;
+}
+
+/* login_view */
+
+.body_view {
+    background-color: #1C3045;
+}
+
+.main_login_register {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+}
+
+.image_container {
+    margin: 0 auto;
+}
+
+.view_logo {
+    width: 30vw;
+}
+
+.form_container {
+    margin: 0 auto;
+}
+
+.form_views {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_views input {
+    margin: 0.5em;
+}
+
+.href_views {
+    color: #95B8D1;
+}
+
+.text_views {
+    color: white;
+}
+>>>>>>> 58a239d8efdc24876c0b5c5e1df344b45ff702fb
