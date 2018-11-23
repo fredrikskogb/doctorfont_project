@@ -103,6 +103,8 @@ label {
     color: black;
 }
 
+/* Hero_image on index */
+
 .hero_image_frame {
     height: 94.5vh;
     width: auto;
@@ -167,4 +169,13 @@ label {
 
 .text_views {
     color: white;
+}
+
+#file {
+    color: white;
+}
+
+#description {
+    height: 150px;
+    margin: 0.5em;
 }
