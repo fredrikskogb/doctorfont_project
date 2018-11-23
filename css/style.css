@@ -101,6 +101,27 @@ label {
 .navbar_linklist li a{
     text-decoration: none;
     color: black;
+}
+
+.hero_image_frame {
+    height: 94.5vh;
+    width: auto;
+    white-space: nowrap;
+    background-color: #1C3045;
+    text-align: center;
+}
+
+.hero_image_inline_helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.hero_image_frame img{
+    vertical-align: middle;
+    max-height: 1000px;
+    max-width: 600px;
+}
 
 /* login_view */
 
