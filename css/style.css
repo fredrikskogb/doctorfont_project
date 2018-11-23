@@ -101,7 +101,7 @@ label {
 .navbar_linklist li a{
     text-decoration: none;
     color: black;
-
+}
 /* login_view */
 
 .body_view {
@@ -146,4 +146,13 @@ label {
 
 .text_views {
     color: white;
+}
+
+#file {
+    color: white;
+}
+
+#description {
+    height: 150px;
+    margin: 0.5em;
 }
