@@ -101,6 +101,47 @@ label {
 .navbar_linklist li a{
     text-decoration: none;
     color: black;
+}
+
+/* Hero image in index.php*/
+/*
+.hero_image_frame{
+    height: 94.5vh;
+    margin: 0 auto;
+    background-color: #1C3045;
+}
+
+.hero_image_frame img{
+    /display: block;/
+    width: 50%;
+    height: auto;
+    margin: auto auto;
+    vertical-align: middle;
+}
+*/
+
+.hero_image_frame {
+    height: 94.5vh;      /* equals max image height */
+    width: auto;
+    white-space: nowrap;
+    background-color: #1C3045;
+    text-align: center;
+}
+
+.hero_image_inline_helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img {
+    //background: #3A6F9A;
+    vertical-align: middle;
+    max-height: 1000px;
+    /*max-height: 25px;*/
+    max-width: 600px;
+    /*max-width: 160px;*/
+}
 
 /* login_view */
 
