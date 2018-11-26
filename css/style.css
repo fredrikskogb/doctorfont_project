@@ -160,9 +160,22 @@ label {
 .form_views {
     display: flex;
     flex-direction: column;
+    width: 50vw;
 }
 
 .form_views input {
+    margin: 0.5em;
+}
+
+#title {
+    width: 15vw;
+}
+
+.submit {
+    width: 8em;
+}
+
+.note-editor {
     margin: 0.5em;
 }
 
