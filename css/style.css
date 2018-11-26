@@ -54,11 +54,14 @@ label {
 
 .navbar{
     background-color: #D7BCC8;
-    height: 2em;
+    height: 3em;
     display: flex;
     justify-content: space-between;
-    
-    padding: 1em 2em 0 2em;
+    position: fixed;
+    width: 100vw;
+    padding: 1em 2em 1em 2em;
+    /*padding: 1px 0 0 2px;*/
+    box-sizing: border-box;
 }
 
 .navbar_container{
@@ -102,6 +105,29 @@ label {
     text-decoration: none;
     color: black;
 }
+
+/* Hero_image on index */
+
+.hero_image_frame {
+    height: 100vh;
+    width: auto;
+    white-space: nowrap;
+    background-color: #1C3045;
+    text-align: center;
+}
+
+.hero_image_inline_helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.hero_image_frame img{
+    vertical-align: middle;
+    max-height: 1000px;
+    max-width: 600px;
+}
+
 /* login_view */
 
 .body_view {
