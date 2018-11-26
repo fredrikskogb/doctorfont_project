@@ -1,3 +1,3 @@
 <?php 
 
-$ROOT_URL = "http://localhost:8888";
+$ROOT_URL = "http://localhost/doctorfont_project";
