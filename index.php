@@ -16,7 +16,7 @@ include 'includes/head.php';
 
 
 <?php
-include 'views/footer.php';
+include 'includes/footer.php';
 ?>
         
     </body>
