@@ -11,7 +11,7 @@ include '../includes/head.php';
         </div>
         <div class="form_container">
             <div>
-                <form class="form_views" action="">
+                <form method="POST" class="form_views" action="../includes/login.php">
                     <label for="username">Användarnamn</label>
                     <input type="text" placeholder="Användarnamn" name="username" id="username">
 
