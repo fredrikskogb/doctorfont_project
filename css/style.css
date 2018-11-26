@@ -179,9 +179,9 @@ label {
 }
 /* about_us */
 
-body {
+.about_us_container{
     background-color: #1C3045;
-
+    
 }
 
 .view_logo_about_us {
@@ -222,12 +222,6 @@ body {
     }
 
 }
-
-
-
-
-
-
 
 #file {
     color: white;
