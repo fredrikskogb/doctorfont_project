@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+=======
+>>>>>>> 2eaa7e25bfbe154e82690c3674a85b0d03457c23
 /* CSS reset */
 
 html, body, div, span, applet, object, iframe,
@@ -107,12 +110,33 @@ label {
     color: black;
 }
 
+/* Hero_image on index */
+
+.hero_image_frame {
+    height: 94.5vh;
+    width: auto;
+    white-space: nowrap;
+    background-color: #1C3045;
+    text-align: center;
+}
+
+.hero_image_inline_helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.hero_image_frame img{
+    vertical-align: middle;
+    max-height: 1000px;
+    max-width: 600px;
+}
+
 /* login_view */
 
 .body_view {
     background-color: #1C3045;
 }
-
 
 .main_login_register {
     display: flex;
@@ -204,3 +228,12 @@ body {
 
 
 
+
+#file {
+    color: white;
+}
+
+#description {
+    height: 150px;
+    margin: 0.5em;
+}
