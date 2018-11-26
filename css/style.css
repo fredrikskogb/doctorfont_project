@@ -222,6 +222,21 @@ label {
 
 }
 
+/* creat_footer */
+
+.footer_image{
+    height: 3em;
+    margin-bottom: 1em;
+}
+
+footer{
+    height: 100px;
+    background-color: #D7BCC8;
+    text-align: center;
+    padding-top: 25px;
+    
+}
+
 @media screen and (min-width: 768px){
 
     .card {
@@ -252,3 +267,4 @@ label {
     height: 150px;
     margin: 0.5em;
 }
+
