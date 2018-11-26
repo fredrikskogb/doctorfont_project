@@ -14,5 +14,9 @@ include 'includes/head.php';
             <img src="images/logo_light.png">
         </div>
 
+
+<?php
+include 'views/footer.php';
+?>
         
     </body>
