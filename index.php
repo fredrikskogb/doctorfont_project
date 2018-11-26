@@ -13,5 +13,9 @@ include 'includes/head.php';
             <span class="hero_image_inline_helper"></span>
             <img src="images/logo_light.png">
         </div>
+
+<?php
+include 'views/footer.php';
+?>
         
     </body>
