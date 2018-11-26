@@ -13,25 +13,6 @@ include 'includes/head.php';
             <span class="hero_image_inline_helper"></span>
             <img src="images/logo_light.png">
         </div>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
-        <h2>Hej</h2>
 
         
     </body>
