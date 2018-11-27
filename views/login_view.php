@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../includes/head.php';
 ?>
 <title>Millhouse - Logga in</title>
