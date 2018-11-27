@@ -18,14 +18,28 @@ include 'head.php';
                 </div>
             </li>
         </ul>
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>  
+
+        <ul class="dropdown">            
+                    <li>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            MENY
+                        </a>
+                            <div class="dropdown-menu menu_dropdown" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="index.php">Hem</a>
+                                    <a class="dropdown-item" href="about_us.php">Om oss</a>
+                                        <a class="dropdown-item" href="categorys.php">Kategorier</a>
+                                            <a class="dropdown-item" href="#">Kontakt</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>     
         </div>
     </div>
     <div class="navbar_container">
         <a href="#" id="navbar_logout_link">Logga ut</a>
     </div>
 </header>
+
 </body>
 
 

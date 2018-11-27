@@ -76,12 +76,23 @@ label {
 .navbar_linklist {
     display: none;
 }
-   
-.hamburger {
-    font-size: 2rem;
-    margin-top: 0 auto;
 
+.navbar .menu_dropdown {
+    background-color: #fefefa;
 }
+
+.navbar .menu_dropdown a {
+    font-family: ;
+}
+
+.navbar .menu_dropdown a:hover {
+    color: #1C3045;
+}
+
+.navbar .menu_dropdown a:active {
+    background-color: #1C3045;
+}
+
 
 @media screen and (min-width: 768px) { 
 
