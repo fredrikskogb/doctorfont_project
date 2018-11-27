@@ -1,3 +1,14 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* CSS reset */
+
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -104,6 +115,7 @@ label {
     color: black;
 }
 
+
 /* Hero_image on index */
 
 .hero_image_frame {
@@ -125,6 +137,7 @@ label {
     max-height: 1000px;
     max-width: 600px;
 }
+
 
 /* login_view */
 
@@ -184,6 +197,7 @@ label {
 .text_views {
     color: white;
 }
+
 /* about_us */
 
 .about_us{
@@ -267,4 +281,5 @@ footer{
     height: 150px;
     margin: 0.5em;
 }
+
 
