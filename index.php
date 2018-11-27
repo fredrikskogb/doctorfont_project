@@ -4,6 +4,8 @@ include 'includes/head.php';
 ?>
 <title>Millhouse Blog</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 </head>
     <body>
 
