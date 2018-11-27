@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 class User 
 {
 
@@ -10,8 +10,8 @@ class User
     }
 
     public function register($username, $password, $email){
-/*
-        $statement = $this->$pdo->prepare("SELECT * FROM users WHERE username = :username AND mail = :email");
+
+        $statement = $this->pdo->prepare("SELECT username, mail FROM users WHERE username = :username OR mail = :email");
         $statement->execute(
             [
                 ":username" => $username,
@@ -21,25 +21,29 @@ class User
 
         $fetched_data = $statement->fetch();
 
-        echo $fetched_data;
+        var_dump($fetched_data['mail']);
+        
+        if($fetched_data['username'] == $username){
+            header('Location: ../views/register_view.php?username_taken=true');
+            exit();
+        } elseif($fetched_data['mail'] == $email){
+            header('Location: ../views/register_view.php?mail_taken=true');
+            exit();
+        } else{
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        echo "<br>*<br>";
+            $statement = $this->pdo->prepare("INSERT INTO users (username, password, mail) VALUES (:username, :password, :email)");
 
-        var_dump($fetched_data);
-*/
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $statement->execute(
+                [
+                    ":username" => $username,
+                    ":password" => $hashed_password,
+                    ":email" => $email
+                ]
+            );
 
-        $statement = $this->pdo->prepare("INSERT INTO users (username, password, mail) VALUES (:username, :password, :email)");
-
-        $statement->execute(
-            [
-                ":username" => $username,
-                ":password" => $hashed_password,
-                ":email" => $email
-            ]
-        );
-
-        header('Location: ../views/login_view.php');
+            header('Location: ../views/login_view.php');
+        }
 
     }
 
