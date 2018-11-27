@@ -20,7 +20,7 @@ include '../includes/head.php';
         </div>
         <div class="form_container">
             <div>
-                <form class="form_views" action="" enctype="multipart/form-data">
+                <form class="form_views" action="" method="POST" enctype="multipart/form-data">
                     <label for="title">Titel</label>
                     <input type="text" placeholder="Titel..." name="title" id="title">
 
@@ -29,6 +29,30 @@ include '../includes/head.php';
 
                     <label for="summernote">Beskrivning</label>
                     <textarea type="text" placeholder="Beskrivning..." name="editordata" id="summernote"></textarea>
+
+                    <div class="radio_wrapper">
+                        <p>Välj kategori:</p>
+
+                        <div>
+                            <input type="radio" name="category" value="solglasögon" checked>
+                            <label for="huey" class="label_block">Solglasögon</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="category" value="inredningsartiklar">
+                            <label for="dewey" class="label_block">Inredningsartiklar</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="category" value="klockor">
+                            <label for="louie" class="label_block">Klockor</label>
+                        </div>
+                        
+                        <div>
+                            <input type="radio" name="category" value="mode">
+                            <label for="louie" class="label_block">Mode</label>
+                        </div>
+                    </div>
 
                     <input type="submit" value="Lägg till" class="submit">
                     <script>
