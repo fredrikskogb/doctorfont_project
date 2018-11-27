@@ -27,16 +27,19 @@ class User
 
         var_dump($fetched_data);
 */
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $statement = $this->$pdo->prepare("INSERT INTO user (username, password, mail) VALUES (:username, :password, :email)");
+        $statement = $this->pdo->prepare("INSERT INTO users (username, password, mail) VALUES (:username, :password, :email)");
 
         $statement->execute(
             [
                 ":username" => $username,
-                ":password" => $password,
-                ":email" => email
+                ":password" => $hashed_password,
+                ":email" => $email
             ]
         );
+
+        header('Location: ../views/login_view.php');
 
     }
 
