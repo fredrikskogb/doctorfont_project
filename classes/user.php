@@ -9,6 +9,37 @@ class User
         $this->pdo = $pdo;
     }
 
+    public function register($username, $password, $email){
+/*
+        $statement = $this->$pdo->prepare("SELECT * FROM users WHERE username = :username AND mail = :email");
+        $statement->execute(
+            [
+                ":username" => $username,
+                ":email" => $email
+            ]
+        );
+
+        $fetched_data = $statement->fetch();
+
+        echo $fetched_data;
+
+        echo "<br>*<br>";
+
+        var_dump($fetched_data);
+*/
+
+        $statement = $this->$pdo->prepare("INSERT INTO user (username, password, mail) VALUES (:username, :password, :email)");
+
+        $statement->execute(
+            [
+                ":username" => $username,
+                ":password" => $password,
+                ":email" => email
+            ]
+        );
+
+    }
+
 
     public function login($username, $password){
 
@@ -32,7 +63,5 @@ class User
         }
     }
 
-    public function register(){
-
-    }
+    
 }
