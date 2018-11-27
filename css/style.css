@@ -139,7 +139,7 @@ label {
 }
 
 
-/* login_view */
+/* login, register, create */
 
 .body_view {
     background-color: #1C3045;
@@ -195,6 +195,14 @@ label {
 }
 
 .text_views {
+    color: white;
+}
+
+.label_block {
+    display: inline;
+}
+
+.radio_wrapper {
     color: white;
 }
 
