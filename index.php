@@ -8,5 +8,15 @@ include 'includes/head.php';
     <body>
 
         <?php include 'includes/navbar.php';?>
+
+        <div class="hero_image_frame">
+            <span class="hero_image_inline_helper"></span>
+            <img src="images/logo_light.png">
+        </div>
+
+
+<?php
+include 'includes/footer.php';
+?>
         
     </body>
