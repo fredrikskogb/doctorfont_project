@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 class User 
 {
 
@@ -11,6 +11,21 @@ class User
 
     public function register($username, $password, $email){
 
+        //Checking if username, password is to short or if email is missing.
+
+        if(strlen($username) < 4){
+            header('Location: ../views/login_view.php?username_to_short=true');
+            exit();
+        } elseif(strlen($password) < 4){
+            header('Location: ../views/login_view.php?password_to_short=true');
+            exit();
+        } elseif(strlen($email) < 1 || ctype_space($email)){
+            header('Location: ../views/login_view.php?missing_email=true');
+            exit();
+        }
+
+        //Checking if username or email is taken.
+
         $statement = $this->pdo->prepare("SELECT username, mail FROM users WHERE username = :username OR mail = :email");
         $statement->execute(
             [
@@ -20,14 +35,12 @@ class User
         );
 
         $fetched_data = $statement->fetch();
-
-        var_dump($fetched_data['mail']);
         
         if($fetched_data['username'] == $username){
             header('Location: ../views/register_view.php?username_taken=true');
             exit();
         } elseif($fetched_data['mail'] == $email){
-            header('Location: ../views/register_view.php?mail_taken=true');
+            header('Location: ../views/register_view.php?email_taken=true');
             exit();
         } else{
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
