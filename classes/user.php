@@ -11,16 +11,23 @@ class User
 
     public function register($username, $password, $email){
 
-        //Checking if username, password is to short or if email is missing.
+        /*Checking if username, password is to short or if email is missing
+        or if any of them is just made upp of empty space.*/
 
-        if(strlen($username) < 4){
-            header('Location: ../views/login_view.php?username_to_short=true');
-            exit();
-        } elseif(strlen($password) < 4){
-            header('Location: ../views/login_view.php?password_to_short=true');
-            exit();
-        } elseif(strlen($email) < 1 || ctype_space($email)){
-            header('Location: ../views/login_view.php?missing_email=true');
+        if(strlen($username) < 4 || ctype_space($username)){
+            $_SESSION['invalid_username'] = true;
+        } 
+        
+        if(strlen($password) < 4 || ctype_space($password)){
+            $_SESSION['invalid_password'] = true;
+        } 
+        
+        if(strlen($email) < 1 || ctype_space($email)){
+            $_SESSION['invalid_email'] = true;
+        }
+
+        if ($_SESSION['invalid_username'] || $_SESSION['invalid_password'] || $_SESSION['invalid_email']) {
+            header('Location: ../views/register_view.php');
             exit();
         }
 
@@ -43,6 +50,9 @@ class User
             header('Location: ../views/register_view.php?email_taken=true');
             exit();
         } else{
+
+            //Registering user data in database.
+
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             $statement = $this->pdo->prepare("INSERT INTO users (username, password, mail) VALUES (:username, :password, :email)");
