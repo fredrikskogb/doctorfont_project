@@ -4,7 +4,7 @@
     <div class="navbar_container">
         <ul class="navbar_linklist">
             <li><a href="<?= $ROOT_URL ?>/index.php">Hem</a></li>
-            <li><a href="<?= $ROOT_URL ?>/views/about_us.php">Om oss</a></li>
+            <li><a href="<?= $ROOT_URL ?>/views/about_us_view.php">Om oss</a></li>
             <li class="navbar_dropdown">
                 <span>Kategorier</span>
                 <div class="navbar_dropdown_content">

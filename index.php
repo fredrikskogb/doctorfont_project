@@ -7,7 +7,6 @@ include 'includes/head.php';
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
     <body>
-        <?= $_SESSION['fetch']; ?>
         <?php include 'includes/navbar.php';?>
 
         <div class="hero_image_frame">
