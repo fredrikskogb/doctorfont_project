@@ -54,6 +54,13 @@ table {
 }
 
 /* General css */
+p, li, a, label {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
 
 label {
     display: none;
@@ -71,6 +78,7 @@ label {
     padding: 1em 2em 1em 2em;
     /*padding: 1px 0 0 2px;*/
     box-sizing: border-box;
+    box-shadow: 0 0 10px 0 rgba(28, 48, 69, 0.452);
 }
 
 .navbar_container{
@@ -122,7 +130,10 @@ label {
     height: 100vh;
     width: auto;
     white-space: nowrap;
-    background-color: #1C3045;
+    background-image: url("../images/heder_millhouse.jpg");
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
     text-align: center;
 }
 
@@ -134,8 +145,10 @@ label {
 
 .hero_image_frame img{
     vertical-align: middle;
-    max-height: 1000px;
-    max-width: 600px;
+    max-height: 20%;
+    max-width: auto;
+    filter: drop-shadow(1px 1px 0 #D7BCC8) 
+            drop-shadow(-1px -1px 0 #D7BCC8);
 }
 
 
@@ -264,9 +277,11 @@ footer{
     .card {
         background-color: #F0F0F0;
         margin: 8em;
+    }
+
+    .hero_image_frame img{
+        max-height: 40%;
         
-       
-    
     }
 
 }
