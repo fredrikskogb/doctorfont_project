@@ -15,7 +15,7 @@ include '../includes/head.php';
             <div>
                 <form class="form_views" action="../includes/register.php" method="post">
                     <label for="username">Användarnamn</label>
-                    <input type="text" placeholder="Användarnamn" name="username" id="username">
+                    <input type="text" placeholder="Användarnamn, minst 4 tecken" name="username" id="username">
                     
                     <?php if(isset($_SESSION['invalid_username'])) {
                         if ($_SESSION['invalid_username']) {
@@ -24,7 +24,7 @@ include '../includes/head.php';
                     } ?>
 
                     <label for="password">Lösenord</label>
-                    <input type="text" placeholder="Lösenord" name="password" id="password">
+                    <input type="text" placeholder="Lösenord, minst 4 tecken" name="password" id="password">
 
                     <?php if(isset($_SESSION['invalid_password'])) {
                         if ($_SESSION['invalid_password']) {
