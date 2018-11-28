@@ -19,7 +19,7 @@ include '../includes/head.php';
                     
                     <?php if(isset($_SESSION['invalid_username'])) {
                         if ($_SESSION['invalid_username']) {
-                            echo "Ogiltigt användarnamn";
+                            ?> <p class="login_and_registration_error_message">Ogiltigt användarnamn</p> <?php
                         }
                     } ?>
 
@@ -28,7 +28,7 @@ include '../includes/head.php';
 
                     <?php if(isset($_SESSION['invalid_password'])) {
                         if ($_SESSION['invalid_password']) {
-                            echo "Ogiltigt lösenord";
+                            ?> <p class="login_and_registration_error_message">Ogiltigt lösenord</p> <?php
                         }
                     } ?>
 
@@ -37,7 +37,7 @@ include '../includes/head.php';
 
                     <?php if(isset($_SESSION['invalid_email'])) {
                         if ($_SESSION['invalid_email']) {
-                            echo "Ogiltig email";
+                            ?> <p class="login_and_registration_error_message">Ogiltig email</p> <?php
                         }
                     } ?>
 
