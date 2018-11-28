@@ -18,6 +18,13 @@ include '../includes/head.php';
 
                     <label for="password">Lösenord</label>
                     <input type="text" placeholder="Lösenord" name="password" id="password">
+                    
+                    <?php if(isset($_GET['login_failed'])){
+                            if($_GET['login_failed']){
+                                ?> <p class="login_and_registration_error_message">Felaktigt användarnamn eller lösenord</p> <?php
+                            }
+                        }
+                    ?>
 
                     <input type="submit" value="Logga in">
                 </form>

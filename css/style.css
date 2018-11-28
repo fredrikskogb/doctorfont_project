@@ -206,6 +206,10 @@ label {
     color: white;
 }
 
+.login_and_registration_error_message{
+    color: white;
+}
+
 /* about_us */
 
 .about_us{

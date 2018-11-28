@@ -88,8 +88,10 @@ class User
         if($is_password_correct){
             $_SESSION["username"] = $fetched_user["username"];
             header('Location: ../index.php');
+            exit();
         }else{
             header('Location: ../views/login_view.php?login_failed=true');
+            exit();
         }
     }
 

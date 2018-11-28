@@ -15,20 +15,20 @@ include '../includes/head.php';
             <div>
                 <form class="form_views" action="../includes/register.php" method="post">
                     <label for="username">Användarnamn</label>
-                    <input type="text" placeholder="Användarnamn" name="username" id="username">
+                    <input type="text" placeholder="Användarnamn, minst 4 tecken" name="username" id="username">
                     
                     <?php if(isset($_SESSION['invalid_username'])) {
                         if ($_SESSION['invalid_username']) {
-                            echo "Ogiltigt användarnamn";
+                            ?> <p class="login_and_registration_error_message">Ogiltigt användarnamn</p> <?php
                         }
                     } ?>
 
                     <label for="password">Lösenord</label>
-                    <input type="text" placeholder="Lösenord" name="password" id="password">
+                    <input type="text" placeholder="Lösenord, minst 4 tecken" name="password" id="password">
 
                     <?php if(isset($_SESSION['invalid_password'])) {
                         if ($_SESSION['invalid_password']) {
-                            echo "Ogiltigt lösenord";
+                            ?> <p class="login_and_registration_error_message">Ogiltigt lösenord</p> <?php
                         }
                     } ?>
 
@@ -37,7 +37,7 @@ include '../includes/head.php';
 
                     <?php if(isset($_SESSION['invalid_email'])) {
                         if ($_SESSION['invalid_email']) {
-                            echo "Ogiltig email";
+                            ?> <p class="login_and_registration_error_message">Ogiltig email</p> <?php
                         }
                     } ?>
 
