@@ -93,6 +93,7 @@ class User
 
         if($is_password_correct){
             $_SESSION["username"] = $fetched_user["username"];
+            $_SESSION['is_logged_in'] = true;
             header('Location: ../index.php');
             exit();
         }else{
