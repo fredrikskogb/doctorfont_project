@@ -16,6 +16,6 @@
         </ul>
     </div>
     <div class="navbar_container">
-        <a href="#" id="navbar_logout_link">Logga ut</a>
+        <a href="<?= $ROOT_URL ?>/includes/logout.php" id="navbar_logout_link">Logga ut</a>
     </div>
 </header>
