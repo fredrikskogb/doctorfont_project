@@ -1,9 +1,3 @@
-<?php
-include 'head.php';
-
-?>
-</head>
-<body>
 <header class="navbar">
     <div class="navbar_container">
         <ul class="navbar_linklist">
