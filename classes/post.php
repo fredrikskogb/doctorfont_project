@@ -25,8 +25,6 @@ class Post implements publication
          ]);
 
 
-
-
     }
 
     public function delete($delete){

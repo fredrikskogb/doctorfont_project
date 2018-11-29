@@ -93,9 +93,9 @@ class User
 
 
         if($is_password_correct){
-            $_SESSION["username"] = $fetched_user["username"];
-            $_SESSION["user_id"] = $fetched_user["id"];
-            $_SESSION["is_admin"] = $fetched_user["is_admin"];
+            $_SESSION['username'] = $fetched_user['username'];
+            $_SESSION['user_id'] = $fetched_user['id'];
+            $_SESSION['is_admin'] = $fetched_user['is_admin'];
             $_SESSION['is_logged_in'] = true;
             header('Location: ../index.php');
             exit();
