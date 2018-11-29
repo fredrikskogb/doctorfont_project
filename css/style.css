@@ -184,7 +184,7 @@ label {
 .form_views {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 17em;
 }
 
 .form_views input {
