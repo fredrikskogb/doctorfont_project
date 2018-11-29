@@ -81,47 +81,96 @@ label {
     box-shadow: 0 0 10px 0 rgba(28, 48, 69, 0.452);
 }
 
-.navbar_container{
-    height: auto;
-}
-
-.navbar_linklist{
-    display: flex;
-}
-
-.navbar_linklist li{
-    margin-right: 5em;
-}
-
-#navbar_logout_link{
-    float: right;
-    text-decoration: none;
-    color: black;
-}
-
-.navbar_dropdown{
-    position: relative;
-    display: inline-block;
-}
-
-.navbar_dropdown_content{
+.navbar_linklist {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
 }
 
-.navbar_dropdown:hover .navbar_dropdown_content {
-    display: block;
+.navbar .menu_dropdown {
+    background-color:  #f9f9f9;
 }
 
-.navbar_linklist li a{
-    text-decoration: none;
+.navbar .menu_dropdown a {
+    font-family: ;
+}
+
+.navbar .menu_dropdown a:hover {
+    color: #1C3045;
+}
+
+.navbar .menu_dropdown a:active {
+    background-color: #1C3045;
+}
+
+.dropdown-toggle {
+    font-size: 0.9rem;
     color: black;
+    
 }
+
+
+@media screen and (min-width: 768px) { 
+
+    .dropdown {
+        display: none;
+    
+    }
+
+    .navbar{
+        background-color: #D7BCC8;
+        height: 3em;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100vw;
+        padding: 1em 2em 1em 2em;
+        /*padding: 1px 0 0 2px;*/
+        box-sizing: border-box;
+    }
+    .navbar_container {
+        height: auto;
+    }
+    
+    .navbar_linklist {
+        display: flex;
+    }
+    
+    .navbar_linklist li {
+        margin-right: 5em;
+    }
+    
+    #navbar_logout_link {
+        float: right;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .navbar_dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .navbar_dropdown_content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+    
+    .navbar_dropdown:hover .navbar_dropdown_content {
+        display: block;
+    }
+    
+    .navbar_linklist li a {
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
+
 
 
 /* Hero_image on index */
