@@ -16,14 +16,20 @@ class User
 
         if(strlen($username) < 4 || ctype_space($username)){
             $_SESSION['invalid_username'] = true;
-        } 
+        } else{
+            $_SESSION['invalid_username'] = false;
+        }
         
         if(strlen($password) < 4 || ctype_space($password)){
             $_SESSION['invalid_password'] = true;
-        } 
+        } else{
+            $_SESSION['invalid_password'] = false;
+        }
         
         if(strlen($email) < 1 || ctype_space($email)){
             $_SESSION['invalid_email'] = true;
+        } else{
+            $_SESSION['invalid_email'] = false;
         }
 
         if ($_SESSION['invalid_username'] || $_SESSION['invalid_password'] || $_SESSION['invalid_email']) {
