@@ -89,10 +89,6 @@ label {
     background-color:  #f9f9f9;
 }
 
-.navbar .menu_dropdown a {
-    font-family: ;
-}
-
 .navbar .menu_dropdown a:hover {
     color: #1C3045;
 }
@@ -245,7 +241,7 @@ label {
 }
 
 #title {
-    width: 15vw;
+    width: 12.5em;
 }
 
 .submit {
