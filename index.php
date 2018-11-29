@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config.php';
 include 'includes/head.php';
 ?>
@@ -8,7 +9,6 @@ include 'includes/head.php';
 
 </head>
     <body>
-
         <?php include 'includes/navbar.php';?>
 
         <div class="hero_image_frame">

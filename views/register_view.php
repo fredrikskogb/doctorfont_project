@@ -1,4 +1,6 @@
 <?php
+//session_destroy();
+session_start();
 include '../includes/head.php';
 ?>
 <title>Millhouse - Registrera</title>
@@ -11,15 +13,33 @@ include '../includes/head.php';
         </div>
         <div class="form_container">
             <div>
-                <form class="form_views" action="">
+                <form class="form_views" action="../includes/register.php" method="post">
                     <label for="username">Användarnamn</label>
-                    <input type="text" placeholder="Användarnamn" name="username" id="username">
+                    <input type="text" placeholder="Användarnamn, minst 4 tecken" name="username" id="username">
+                    
+                    <?php if(isset($_SESSION['invalid_username'])) {
+                        if ($_SESSION['invalid_username']) {
+                            ?> <p class="login_and_registration_error_message">Ogiltigt användarnamn</p> <?php
+                        }
+                    } ?>
 
                     <label for="password">Lösenord</label>
-                    <input type="text" placeholder="Lösenord" name="password" id="password">
+                    <input type="text" placeholder="Lösenord, minst 4 tecken" name="password" id="password">
+
+                    <?php if(isset($_SESSION['invalid_password'])) {
+                        if ($_SESSION['invalid_password']) {
+                            ?> <p class="login_and_registration_error_message">Ogiltigt lösenord</p> <?php
+                        }
+                    } ?>
 
                     <label for="mail">E-mail</label>
                     <input type="text" placeholder="E-mail" name="mail" id="mail">
+
+                    <?php if(isset($_SESSION['invalid_email'])) {
+                        if ($_SESSION['invalid_email']) {
+                            ?> <p class="login_and_registration_error_message">Ogiltig email</p> <?php
+                        }
+                    } ?>
 
                     <input type="submit" value="Registrera">
                 </form>
