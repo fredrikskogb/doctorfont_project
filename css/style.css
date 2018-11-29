@@ -233,7 +233,11 @@ label {
 .form_views {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 17em;
+}
+
+.create_views_container {
+    width: 25em;
 }
 
 .form_views input {
@@ -266,6 +270,7 @@ label {
 
 .radio_wrapper {
     color: white;
+    margin: 0.5em;
 }
 
 .login_and_registration_error_message{
@@ -285,7 +290,7 @@ label {
 
 .view_logo_about_us {
     display: flex;
-    width: 50vw;
+    width: 30vw;
     margin: 0 auto;    
 }
 
@@ -329,23 +334,23 @@ footer{
 
     .card {
         background-color: #F0F0F0;
-        margin: 8em;
+        margin: 3em;
     }
 
     .hero_image_frame img{
         max-height: 40%;
-        
     }
 
+    .view_logo_create {
+        width: 25vw;
+    }
 }
+
 @media screen and (min-width: 992px){
     .card {
         background-color: #F0F0F0;
-        margin: 10em;
-        padding: 10em;
-        
-       
-    
+        margin: 3em auto auto auto;
+        width: 60vw;
     }
 }
 
