@@ -91,9 +91,13 @@ class User
 
         $is_password_correct = password_verify($password, $fetched_user["password"]);
 
+        var_dump($fetched_user['is_admin']);
+
         if($is_password_correct){
             $_SESSION["username"] = $fetched_user["username"];
+            $_SESSION["is_admin"] = $fetched_user["is_admin"];
             $_SESSION['is_logged_in'] = true;
+            if($_SESSION['is_admin']){echo "adminadmin";}
             header('Location: ../index.php');
             exit();
         }else{
