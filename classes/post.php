@@ -1,5 +1,6 @@
 <?php
 
+include 'interface.php';
 
 class Post implements publication
 {
@@ -13,19 +14,24 @@ class Post implements publication
 
         $created_by = $_SESSION['user_id'];
 
-        $statement = $pdo->prepare("INSERT INTO posts (title, image, description, category, created_by)
-         VALUES (:title, :image, :desription, :category)");
+        $temporary_location = $image["tmp_name"];
+
+        $new_location = "uploads/" . $image["name"];
+
+        $statement = $this->pdo->prepare("INSERT INTO posts (title, image, description, category, created_by)
+         VALUES (:title, :image, :description, :category, :created_by)");
 
          $statement->execute([
             ":title" => $title,
-            ":image" => $image,
+            ":image" => $new_location,
             ":description" => $description,
             ":category" => $category,
             ":created_by" => $created_by
          ]);
 
-
     }
+
+
 
     public function delete($delete){
         $statement = $this->pdo->prepare("DELETE FROM posts WHERE id = :id");
