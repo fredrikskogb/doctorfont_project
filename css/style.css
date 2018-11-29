@@ -78,7 +78,7 @@ label {
 }
 
 .navbar .menu_dropdown {
-    background-color: #fefefa;
+    background-color:  #f9f9f9;
 }
 
 .navbar .menu_dropdown a {
@@ -93,11 +93,17 @@ label {
     background-color: #1C3045;
 }
 
+.dropdown-toggle {
+    font-size: 0.9rem;
+    color: black;
+    
+}
+
 
 @media screen and (min-width: 768px) { 
 
-    .hamburger{
-    display: none;
+    .dropdown {
+        display: none;
     
     }
 

@@ -19,7 +19,9 @@ include 'head.php';
             </li>
         </ul>
 
-        <ul class="dropdown">            
+        <div class="dropdown_container">
+
+            <ul class="dropdown">            
                     <li>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             MENY
@@ -28,10 +30,12 @@ include 'head.php';
                                 <a class="dropdown-item" href="index.php">Hem</a>
                                     <a class="dropdown-item" href="about_us.php">Om oss</a>
                                         <a class="dropdown-item" href="categorys.php">Kategorier</a>
+                                        
                                             <a class="dropdown-item" href="#">Kontakt</a>
                         </div>
                     </li>
                 </ul>
+            </div>
             </div>     
         </div>
     </div>
