@@ -16,11 +16,11 @@ include '../includes/head.php';
 <body class="body_view">
     <main class="main_login_register">
         <div class="image_container">
-            <img class="view_logo" src="../images/logo_light.png" alt="millhouse">
+            <img class="view_logo view_logo_create" src="../images/logo_light.png" alt="millhouse">
         </div>
         <div class="form_container">
             <div>
-                <form class="form_views" action="" method="POST" enctype="multipart/form-data">
+                <form class="form_views create_views_container" action="" method="POST" enctype="multipart/form-data">
                     <label for="title">Titel</label>
                     <input type="text" placeholder="Titel..." name="title" id="title">
 
