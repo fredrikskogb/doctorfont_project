@@ -29,8 +29,16 @@ class Post implements publication
 
     }
 
-    public function delete(){
+    public function delete($delete){
+        $statement = $this->pdo->prepare("DELETE FROM posts WHERE id = :id");
 
+        $statement->execute(
+            [
+                ":id" => $delete,
+            ]
+        );
+
+        header('Location: ../views/index.php');
     }
 
     public function update(){
