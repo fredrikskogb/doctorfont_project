@@ -8,7 +8,23 @@ class Post implements publication
         $this->pdo = $pdo;
     }
 
-    public function create(){
+    public function create($title, $image, $description, $category){
+
+        $created_by = $_SESSION['user_id'];
+
+        $statement = $pdo->prepare("INSERT INTO posts (title, image, description, category, created_by)
+         VALUES (:title, :image, :desription, :category)");
+
+         $statement->execute([
+            ":title" => $title,
+            ":image" => $image,
+            ":description" => $description,
+            ":category" => $category,
+            ":created_by" => $created_by
+         ]);
+
+
+
 
     }
 

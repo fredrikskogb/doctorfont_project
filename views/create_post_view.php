@@ -1,5 +1,6 @@
 <?php
 include '../includes/head.php';
+
 ?>
 <title>Millhouse - Skapa inlägg</title>
 
@@ -20,15 +21,15 @@ include '../includes/head.php';
         </div>
         <div class="form_container">
             <div>
-                <form class="form_views" action="" method="POST" enctype="multipart/form-data">
+                <form class="form_views" action="../includes/create_post.php" method="POST" enctype="multipart/form-data">
                     <label for="title">Titel</label>
                     <input type="text" placeholder="Titel..." name="title" id="title">
 
                     <label for="file">Fil</label>
-                    <input type="file" name="file" id="file">
+                    <input type="file" name="image" id="file">
 
                     <label for="summernote">Beskrivning</label>
-                    <textarea type="text" placeholder="Beskrivning..." name="editordata" id="summernote"></textarea>
+                    <textarea type="text" placeholder="Beskrivning..." name="description" id="summernote"></textarea>
 
                     <div class="radio_wrapper">
                         <p>Välj kategori:</p>
