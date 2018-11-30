@@ -13,4 +13,13 @@
         <?=$post["description"];?>
     </div>
     <p class="post_card_date"><?=$date;?></p>
+
+    <?php
+        if($i + 1 != $array_length){
+            ?>
+            <hr class="post_card_border">
+            <?php
+        }
+    ?>
+
 </div>

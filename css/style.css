@@ -236,10 +236,13 @@ label {
 
 .post_card {
     text-align: center;
+    margin-top: 1em;
 }
 
 .post_card_title {
     font-size: 1.6em;
+    margin-bottom: 1em;
+    
 }
 
 .post_card_image_frame {
@@ -251,11 +254,18 @@ label {
 }
 
 .post_card_description {
-
+    margin-top: 1em;
 }
 
 .post_card_date {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 
+.post_card_border {
+    width: 80%;
+    border-top: 1px solid #A6C9C6;
+    margin-top: 0;
 }
 
 /* login, register, create */
