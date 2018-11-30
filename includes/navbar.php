@@ -6,11 +6,11 @@
         <button type="button" class="btn btn-outline-light button"><li><a href="<?= $ROOT_URL ?>/views/about_us_view.php">Om oss</a></li></button>
          <li class="navbar_dropdown">
 
-                <button type="button" class="btn btn-outline-light"><span>Kategorier</span></button>
+                <button type="button" class="btn btn-outline-light button"><span>Kategorier</span></button>
                 <div class="navbar_dropdown_content">
-                    <a href="<?= $ROOT_URL ?>">Kategori 1</a>
-                    <p>Kategori 2</p>
-                    <p>Kategori 3</p>
+                    <a href="#">Kategori 1</a>
+                    <a href="#">Kategori 2</a>
+                    <a href="#">Kategori 3</a>
                 </div>
             </li>
         </ul>
@@ -23,7 +23,7 @@
                             MENY
                         </a>
                             <div class="dropdown-menu menu_dropdown" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="<?= $ROOT_URL ?>/index.php">Hem</a>
+                                <a class="dropdown-item" href="<?= $ROOT_URL ?>../index.php">Hem</a>
                                     <a class="dropdown-item"  href="<?= $ROOT_URL ?>/views/about_us_view.php">Om oss</a>
                                         <a class="dropdown-item" href="<?= $ROOT_URL ?>/views/categories_view.php">Kategorier</a>
                                         
