@@ -2,6 +2,8 @@
 session_start();
 include 'config.php';
 include 'includes/head.php';
+include 'includes/database_connection.php';
+include 'classes/post.php';
 
 if(isset($_SESSION['is_logged_in'])){
     if($_SESSION['is_logged_in'] === false){
@@ -27,9 +29,17 @@ if(isset($_SESSION['is_logged_in'])){
             <img src="images/logo_light.png">
         </div>
 
+    <?php
+    
 
+    $all_posts = new Post($pdo);
+    $all_posts->getAllPosts();
 
+    foreach($all_posts->fetched_posts as $post){
+        echo $post['title'];
+    }
 
+    ?>
 
 <?php
 include 'includes/footer.php';

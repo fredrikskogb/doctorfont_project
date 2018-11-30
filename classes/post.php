@@ -6,6 +6,8 @@ class Post implements publication
 {
     private $pdo;
 
+    public $fetched_posts;
+
     public function __construct($pdo){
         $this->pdo = $pdo;
     }
@@ -59,10 +61,7 @@ class Post implements publication
 
         $fetched_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        return $fetched_posts;
-
-
-        $all_posts = getAllposts();
+        $this->fetched_posts = $fetched_posts;
 
 
     }
