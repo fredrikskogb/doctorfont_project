@@ -1,4 +1,5 @@
 <?php
+include '../config.php';
 include '../includes/head.php';
 ?>
 <link rel="stylesheet" type="text/css" href="../css/style.css">
