@@ -30,13 +30,15 @@ if(isset($_SESSION['is_logged_in'])){
         </div>
 
     <?php
-    
+
 
     $all_posts = new Post($pdo);
     $all_posts->getAllPosts();
 
     foreach($all_posts->fetched_posts as $post){
-        echo $post['title'];
+        
+        include 'includes/post_card.php';
+        
     }
 
     ?>
