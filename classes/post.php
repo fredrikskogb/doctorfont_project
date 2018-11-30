@@ -16,7 +16,11 @@ class Post implements publication
 
         $temporary_location = $image["tmp_name"];
 
-        $new_location = "uploads/" . $image["name"];
+        $new_location = "../uploads/" . $image["name"];
+
+        $upload_ok = move_uploaded_file($temporary_location, $new_location);
+
+        if($upload_ok){
 
         $statement = $this->pdo->prepare("INSERT INTO posts (title, image, description, category, created_by)
          VALUES (:title, :image, :description, :category, :created_by)");
@@ -30,7 +34,7 @@ class Post implements publication
          ]);
 
     }
-
+}
 
 
     public function delete($delete){
