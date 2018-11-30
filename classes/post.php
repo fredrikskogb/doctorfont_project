@@ -46,10 +46,24 @@ class Post implements publication
             ]
         );
 
-        header('Location: ../views/index.php');
     }
 
     public function update(){
         
+    }
+
+    public function getAllPosts(){
+
+        $statement = $this->pdo->prepare("SELECT * FROM posts");
+        $statement->execute();
+
+        $fetched_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $fetched_posts;
+
+
+        $all_posts = getAllposts();
+
+
     }
 }
