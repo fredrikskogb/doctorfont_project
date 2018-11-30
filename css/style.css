@@ -75,7 +75,7 @@ label {
     justify-content: space-between;
     position: fixed;
     width: 100vw;
-    padding: 1em 2em 1em 2em;
+    padding: 1em 1em 1em 1em;
     /*padding: 1px 0 0 2px;*/
     box-sizing: border-box;
     box-shadow: 0 0 10px 0 rgba(28, 48, 69, 0.452);
@@ -102,19 +102,27 @@ label {
     color: black;
   
 }
-
-#navbar_logout_link {
-    float: right;
-    text-decoration: none;
+.dropdown li a{
     color: white;
-   
+}
+
+.button_logout a {
+    color: white;
+
+
+}
+
+ a:hover {
+     color: black;
+     text-decoration: none;
 }
 
 
 
-a:hover {
-    color: black;
-}
+
+
+
+
 
 
 
@@ -172,6 +180,23 @@ a:hover {
     
     .navbar_linklist li a {
         text-decoration: none;
+        color: black;
+    }
+    .button {
+        width: 5em;
+        margin-right: 1em;
+    }
+
+    .button li a{
+        color: white;
+
+    }
+
+    .button a:hover{
+        color: black;
+    }
+
+    a:hover{
         color: black;
     }
 
