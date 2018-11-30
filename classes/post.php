@@ -6,6 +6,8 @@ class Post implements publication
 {
     private $pdo;
 
+    public $fetched_posts;
+
     public function __construct($pdo){
         $this->pdo = $pdo;
     }
@@ -42,14 +44,25 @@ class Post implements publication
 
         $statement->execute(
             [
-                ":id" => $delete,
+                ":id" => $delete
             ]
         );
 
-        header('Location: ../views/index.php');
     }
 
     public function update(){
         
+    }
+
+    public function getAllPosts(){
+
+        $statement = $this->pdo->prepare("SELECT * FROM posts");
+        $statement->execute();
+
+        $fetched_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        $this->fetched_posts = $fetched_posts;
+
+
     }
 }
