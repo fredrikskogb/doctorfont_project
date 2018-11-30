@@ -42,7 +42,7 @@ class Post implements publication
 
         $statement->execute(
             [
-                ":id" => $delete,
+                ":id" => $delete
             ]
         );
 
