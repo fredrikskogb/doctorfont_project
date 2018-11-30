@@ -232,6 +232,31 @@ label {
             drop-shadow(-1px -1px 0 gray);
 }
 
+/* Styling on post card */
+
+.post_card {
+    text-align: center;
+}
+
+.post_card_title {
+    font-size: 1.6em;
+}
+
+.post_card_image_frame {
+
+}
+
+.post_card_image {
+    max-width: 80%;
+}
+
+.post_card_description {
+
+}
+
+.post_card_date {
+
+}
 
 /* login, register, create */
 
