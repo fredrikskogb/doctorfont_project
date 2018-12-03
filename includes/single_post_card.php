@@ -15,4 +15,8 @@
 
     <hr class="post_card_border">
 
+<?php
+
+    include 'comments_form.php';
+?>
 </div>
