@@ -2,6 +2,19 @@
 session_start();
 include 'config.php';
 include 'includes/head.php';
+include 'includes/database_connection.php';
+include 'classes/post.php';
+
+if(isset($_SESSION['is_logged_in'])){
+    if($_SESSION['is_logged_in'] === false){
+        header('Location: views/login_view.php');
+        exit();
+    }
+} else{
+    header('Location: views/login_view.php');
+    exit();
+}
+
 ?>
 <title>Millhouse Blog</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -13,13 +26,26 @@ include 'includes/head.php';
 
         <div class="hero_image_frame">
             <span class="hero_image_inline_helper"></span>
-            <img src="images/logo_light.png">
+            <img class="hero_image_millhouse_logo"src="images/logo_light.png">
+            
         </div>
 
+    <?php
 
 
+    $all_posts = new Post($pdo);
+    $all_posts->getAllPosts();
 
+    $i = 0;
+    $array_length = count($all_posts->fetched_posts);
 
+    foreach($all_posts->fetched_posts as $post){
+        
+        include 'includes/post_card.php';
+        $i++;
+    }
+
+    ?>
 <?php
 include 'includes/footer.php';
 ?>

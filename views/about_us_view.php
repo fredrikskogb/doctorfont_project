@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <title>Om oss</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+<?php
+include '../config.php';
+include '../includes/head.php';
+?>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body class="about_us_container">
