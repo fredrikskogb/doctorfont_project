@@ -13,7 +13,7 @@
         <?=$post["description"];?>
     </div>
     <p class="post_card_date"><?=$date;?></p>
-    <a href="views/comment_view.php">Visa alla kommentarer()</a>
+    <a href="views/comment_view.php?post=<?=$post['id']?>">Visa alla kommentarer()</a>
 
     <?php
         if($i + 1 != $array_length){
