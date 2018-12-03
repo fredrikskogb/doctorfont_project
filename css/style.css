@@ -264,6 +264,9 @@ label {
     padding-top: 4em;
 }
 
+.edit_post {
+    margin: 0 1em 0 1em;
+}
 
 /* login, register, create */
 
