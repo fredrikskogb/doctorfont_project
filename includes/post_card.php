@@ -14,12 +14,6 @@
     </div>
     <p class="post_card_date"><?=$date;?></p>
 
-    <?php
-        if($i + 1 != $array_length){
-            ?>
-            <hr class="post_card_border">
-            <?php
-        }
-    ?>
-
+    <hr class="post_card_border">
+            
 </div>
