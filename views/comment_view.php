@@ -32,6 +32,7 @@ if(isset($_SESSION['is_logged_in'])){
         include '../includes/single_post_card.php';
         include '../includes/footer.php';
         ?>
+        </div>
     </body>
 </html>
         
