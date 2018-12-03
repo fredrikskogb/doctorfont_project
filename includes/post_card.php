@@ -1,6 +1,6 @@
 <?php
     $image = substr($post['image'], 3);
-    $date = substr($post['date'], 0, -8);
+    $date = substr($post['date'], 0, -3);
 ?>
 
 <div class="post_card">
@@ -14,7 +14,6 @@
         <?=$post["description"];?>
     </div>
 
-    <p class="post_card_date"><?=$date;?></p>
     <a href="views/comment_view.php?post=<?=$post['id']?>">Visa alla kommentarer()</a>
 
     <hr class="post_card_border">
