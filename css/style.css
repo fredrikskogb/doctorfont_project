@@ -35,7 +35,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -79,6 +79,7 @@ label {
     /*padding: 1px 0 0 2px;*/
     box-sizing: border-box;
     box-shadow: 0 0 10px 0 rgba(28, 48, 69, 0.452);
+    z-index: 1;
 }
 
 .navbar_linklist {
@@ -120,6 +121,7 @@ label {
  a:hover {
      text-decoration: none;
 }
+
 
 
 
@@ -376,15 +378,18 @@ label {
 /* creat_footer */
 
 .footer_image{
-    height: 3em;
+    height: 4em;
     margin-bottom: 1em;
 }
 
 footer{
-    background-color: #D7BCC8;
     text-align: center;
     padding: 25px 0px 25px 0px;
-    
+   
+}
+
+footer p{
+    font-size: 0.8em;
 }
 
 @media screen and (min-width: 768px){
