@@ -225,6 +225,11 @@ label {
             drop-shadow(-1px -1px 0 gray);
 }
 
+.new_post {
+    display: block;
+    text-align: center;
+}
+
 /* Styling on post card */
 
 .post_card {

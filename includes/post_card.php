@@ -6,8 +6,11 @@
 <div class="post_card">
     
     <h2 class="post_card_title"><?=$post["title"];?></h2>
-    <a href="" class="edit_post">Redigera inlägg</a>
-    <a href="includes/delete_post.php?remove_post=<?=$post['id']?>" class="edit_post">Ta bort inlägg</a>
+    <?php
+        if($_SESSION['is_admin'] === true){?>
+            <a href="" class="edit_post">Redigera inlägg</a>
+            <a href="includes/delete_post.php?remove_post=<?=$post['id']?>" class="edit_post">Ta bort inlägg</a>
+        <?php } ?>
     <p class="post_card_date"><?=$date;?></p>
     <div class="post_card_image_frame">
         <img class="post_card_image" src="<?= $image;?>" alt="Bild för inlägget <?=$post['title'];?>">
