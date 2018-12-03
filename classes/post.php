@@ -56,7 +56,7 @@ class Post implements publication
 
     public function getAllPosts(){
 
-        $statement = $this->pdo->prepare("SELECT * FROM posts");
+        $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY date DESC");
         $statement->execute();
 
         $fetched_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
