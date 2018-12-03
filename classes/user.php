@@ -32,11 +32,6 @@ class User
             $_SESSION['invalid_email'] = false;
         }
 
-        if ($_SESSION['invalid_username'] || $_SESSION['invalid_password'] || $_SESSION['invalid_email']) {
-            header('Location: ../views/register_view.php');
-            exit();
-        }
-
         //Checking if username or email is taken.
 
         $statement = $this->pdo->prepare("SELECT username, mail FROM users WHERE username = :username OR mail = :email");
@@ -50,29 +45,44 @@ class User
         $fetched_data = $statement->fetch();
         
         if($fetched_data['username'] == $username){
-            header('Location: ../views/register_view.php?username_taken=true');
-            exit();
-        } elseif($fetched_data['mail'] == $email){
-            header('Location: ../views/register_view.php?email_taken=true');
-            exit();
+            $_SESSION['taken_username'] = true;
         } else{
-
-            //Registering user data in database.
-
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-            $statement = $this->pdo->prepare("INSERT INTO users (username, password, mail) VALUES (:username, :password, :email)");
-
-            $statement->execute(
-                [
-                    ":username" => $username,
-                    ":password" => $hashed_password,
-                    ":email" => $email
-                ]
-            );
-
-            header('Location: ../views/login_view.php');
+            $_SESSION['taken_username'] = false;
         }
+        
+        if($fetched_data['mail'] == $email){
+            $_SESSION['taken_email'] = true;
+        } else{
+            $_SESSION['taken_email'] = false;
+        }
+
+        if ($_SESSION['invalid_username'] || $_SESSION['invalid_password']
+         || $_SESSION['invalid_email'] || $_SESSION['taken_username']
+          || $_SESSION['taken_email']) {
+            header('Location: ../views/register_view.php');
+            exit();
+        }
+/*
+        if($_SESSION['taken_username'] || $_SESSION['taken_email']){
+            header('Location: ../views/register_view.php');
+        }
+*/
+        //Registering user data in database.
+
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        $statement = $this->pdo->prepare("INSERT INTO users (username, password, mail) VALUES (:username, :password, :email)");
+
+        $statement->execute(
+            [
+                ":username" => $username,
+                ":password" => $hashed_password,
+                ":email" => $email
+            ]
+        );
+
+        header('Location: ../views/login_view.php');
+        
 
     }
 

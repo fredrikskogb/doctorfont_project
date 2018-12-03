@@ -326,6 +326,7 @@ label {
 
 .text_views {
     color: white;
+    margin: 0 0.5em;
 }
 
 .label_block {
@@ -339,6 +340,7 @@ label {
 
 .login_and_registration_error_message{
     color: white;
+    margin: 0 0.5em;
 }
 
 /* about_us */
