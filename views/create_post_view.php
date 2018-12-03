@@ -21,13 +21,9 @@ include '../includes/head.php';
         </div>
         <div class="form_container">
             <div>
-<<<<<<< HEAD
-                <form class="form_views" action="../includes/create_post.php" method="POST" enctype="multipart/form-data">
-=======
 
                 <form class="form_views create_views_container" action="../includes/create_post.php" method="POST" enctype="multipart/form-data">
 
->>>>>>> master
                     <label for="title">Titel</label>
                     <input type="text" placeholder="Titel..." name="title" id="title">
 
