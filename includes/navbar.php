@@ -26,8 +26,7 @@
                                 <a class="dropdown-item" href="<?= $ROOT_URL ?>../index.php">Hem</a>
                                     <a class="dropdown-item"  href="<?= $ROOT_URL ?>/views/about_us_view.php">Om oss</a>
                                         <a class="dropdown-item" href="<?= $ROOT_URL ?>/views/categories_view.php">Kategorier</a>
-                                        
-                                            <a class="dropdown-item" href="#">Kontakt</a>
+                                    
                         </div>
                     </li>
                 </ul>
