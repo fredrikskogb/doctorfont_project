@@ -246,6 +246,8 @@ label {
 
 .post_card_description {
     margin-top: 1em;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .post_card_date {
@@ -257,7 +259,7 @@ label {
 .post_card_border {
     width: 80%;
     border-top: 1px solid #A6C9C6;
-    margin-top: 0;
+    margin: 40px auto 40px auto;
 }
 
 /* login, register, create */
@@ -402,6 +404,7 @@ footer{
     .hero_image_frame img{
         max-width: 60%;
     }
+
 }
 
 @media screen and (min-width: 992px){
@@ -411,8 +414,17 @@ footer{
         width: 60vw;
     }
 
-    .hero_image_frame img{
+    .post_card_title {
+        font-size: 2.5em;
+        margin-bottom: 0.6em;
+    }
+
+    .hero_image_frame img {
         max-width: 50%;
+    }
+
+    .post_card_description {
+        max-width: 50em;
     }
 }
 
