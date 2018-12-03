@@ -2,8 +2,7 @@
 
 include 'interface.php';
 
-class Post implements publication
-{
+class Post implements publication {
     private $pdo;
 
     public $fetched_posts;
@@ -18,7 +17,7 @@ class Post implements publication
 
         $created_by = $_SESSION['user_id'];
 
-        $temporary_location = $image["tmp_name"];
+        $temporary_location = $image['tmp_name'];
 
         $new_location = "../uploads/" . $image["name"];
 

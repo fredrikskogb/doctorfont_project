@@ -68,7 +68,7 @@ label {
 
 /* navbar css */
 
-.navbar{
+.navbar {
     background-color: #A6C9C6;
     height: 3em;
     display: flex;
@@ -95,7 +95,7 @@ label {
 }
 
 
-.navbar .menu_dropdown .dropdown-item:hover{
+.navbar .menu_dropdown .dropdown-item:hover {
     background-color: #90bbb8;
 }
 
@@ -105,7 +105,7 @@ label {
     color: black;
   
 }
-.dropdown li a{
+.dropdown li a {
     color:white;
 }
 /*logout button*/
@@ -113,7 +113,7 @@ label {
 .button_logout a {
     color: white;
 }
-.button_logout:hover{
+.button_logout:hover {
     background-color: #90bbb8;
 }
 
@@ -142,7 +142,7 @@ label {
     vertical-align: middle;
 }
 
-.hero_image_frame img{
+.hero_image_frame img {
     vertical-align: middle;
     max-width: 80%;
     max-height: auto;
@@ -188,7 +188,14 @@ label {
 .single_post_container {
     padding-top: 4em;
 }
+.link_all_comments {
+    margin-top: 2em;
+}
 
+.link_all_comments a {
+    color: gray;
+    
+}
 
 /* login, register, create */
 
@@ -262,30 +269,42 @@ label {
     margin: 0.5em;
 }
 
-.login_and_registration_error_message{
+.login_and_registration_error_message {
     color: white;
 }
 
 /* comments_form */
 
-.form_views_comments{
+.form_views_comments {
     margin: 0 auto;
     width: 80%;
 }
 
-.comments_form_container{
-   
-   
+.comment {
+    text-align: center;
 }
+
+.submit_comments {
+    width: 10em;
+    align-self: center;
+    border-radius: 5px;
+    background-color: #A6C9C6;
+    color: white;
+}
+
+.submit_comments:hover {
+    background-color:#90bbb8;
+}
+
 
 
 /* about_us */
 
-.about_us{
+.about_us {
     padding-top: 5em;
 }
 
-.about_us_container{
+.about_us_container {
     background-color: #1C3045;
     
 }
@@ -319,18 +338,18 @@ label {
 
 /* creat_footer */
 
-.footer_image{
+.footer_image {
     height: 4em;
     margin-bottom: 1em;
 }
 
-footer{
+footer {
     text-align: center;
     padding: 25px 0px 25px 0px;
    
 }
 
-footer p{
+footer p {
     font-size: 0.8em;
 }
 
@@ -350,7 +369,7 @@ footer p{
     
     }
 
-    .navbar{
+    .navbar {
         background-color: #A6C9C6;
         height: 3em;
         display: flex;
@@ -387,11 +406,11 @@ footer p{
         color: white;
     }
 
-    .button span{
+    .button span {
         color: white;
     }
 
-   .navbar_dropdown .navbar_dropdown_content a{
+   .navbar_dropdown .navbar_dropdown_content a {
         color: white;
     }
     
@@ -404,16 +423,16 @@ footer p{
         margin-right: 1em;
     }
 
-    .button:hover{
+    .button:hover {
         background-color:#90bbb8;
     }
 
-    .button li a{
+    .button li a {
         color: white;
 
     }
 
-    .hero_image_frame img{
+    .hero_image_frame img {
         max-width: 60%;
     }
 
@@ -441,7 +460,7 @@ footer p{
     }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
     .post_card_image {
         max-width: 1000px;
     }
@@ -449,7 +468,7 @@ footer p{
     .post_card_border {
         max-width: 1000px;
     }
-    .form_views_comments{
+    .form_views_comments {
         max-width: 1000px;
     }
 

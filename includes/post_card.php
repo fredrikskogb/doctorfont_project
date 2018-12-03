@@ -14,7 +14,9 @@
         <?=$post["description"];?>
     </div>
 
+    <div class="link_all_comments">
     <a href="views/comment_view.php?post=<?=$post['id']?>">Visa alla kommentarer()</a>
+    </div>
 
     <hr class="post_card_border">
             
