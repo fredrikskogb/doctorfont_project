@@ -8,6 +8,8 @@ class Post implements publication
 
     public $fetched_posts;
 
+    public $fetched_post;
+
     public function __construct($pdo){
         $this->pdo = $pdo;
     }
@@ -63,6 +65,20 @@ class Post implements publication
 
         $this->fetched_posts = $fetched_posts;
 
+    }
+
+    public function getSinglePost($id){
+
+        $statement = $this->pdo->prepare("SELECT * FROM posts WHERE id = :id");
+        $statement->execute(
+            [
+                ":id" => $id
+            ]
+        );
+
+        $fetched_post = $statement->fetch();
+
+        $this->fetched_post = $fetched_post;
 
     }
 }

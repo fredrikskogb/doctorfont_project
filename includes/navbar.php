@@ -40,9 +40,3 @@
         
     </div>
 </header>
-
-</body>
-
-
-
-

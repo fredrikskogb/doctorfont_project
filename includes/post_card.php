@@ -13,7 +13,9 @@
     <div class="post_card_description">
         <?=$post["description"];?>
     </div>
-    
+
+    <p class="post_card_date"><?=$date;?></p>
+    <a href="views/comment_view.php?post=<?=$post['id']?>">Visa alla kommentarer()</a>
 
     <hr class="post_card_border">
             

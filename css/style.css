@@ -229,7 +229,7 @@ label {
 
 .post_card {
     text-align: center;
-    margin-top: 1em;
+    padding-top: 1em;
 }
 
 .post_card_title {
@@ -263,6 +263,11 @@ label {
     border-top: 1px solid #A6C9C6;
     margin: 40px auto 40px auto;
 }
+
+.single_post_container {
+    padding-top: 4em;
+}
+
 
 /* login, register, create */
 
