@@ -8,6 +8,8 @@ class Post implements publication
 
     public $fetched_posts;
 
+    public $fetched_post;
+
     public function __construct($pdo){
         $this->pdo = $pdo;
     }
@@ -56,13 +58,27 @@ class Post implements publication
 
     public function getAllPosts(){
 
-        $statement = $this->pdo->prepare("SELECT * FROM posts");
+        $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY date DESC");
         $statement->execute();
 
         $fetched_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         $this->fetched_posts = $fetched_posts;
 
+    }
+
+    public function getSinglePost($id){
+
+        $statement = $this->pdo->prepare("SELECT * FROM posts WHERE id = :id");
+        $statement->execute(
+            [
+                ":id" => $id
+            ]
+        );
+
+        $fetched_post = $statement->fetch();
+
+        $this->fetched_post = $fetched_post;
 
     }
 }
