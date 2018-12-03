@@ -249,7 +249,7 @@ label {
 .post_card_description {
     margin-top: 1em;
     max-width: 80%;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
 }
 
 .post_card_date {
@@ -435,6 +435,10 @@ footer p{
 
 @media screen and (min-width: 1200px){
     .post_card_image {
+        max-width: 1000px;
+    }
+
+    .post_card_border {
         max-width: 1000px;
     }
 }
