@@ -428,6 +428,12 @@ footer{
     }
 }
 
+@media screen and (min-width: 1200px){
+    .post_card_image {
+        max-width: 1000px;
+    }
+}
+
 #file {
     color: white;
 }
