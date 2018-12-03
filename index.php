@@ -36,13 +36,9 @@ if(isset($_SESSION['is_logged_in'])){
     $all_posts = new Post($pdo);
     $all_posts->getAllPosts();
 
-    $i = 0;
-    $array_length = count($all_posts->fetched_posts);
-
+    
     foreach($all_posts->fetched_posts as $post){
-        
         include 'includes/post_card.php';
-        $i++;
     }
 
     ?>

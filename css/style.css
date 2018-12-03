@@ -219,8 +219,8 @@ label {
 
 .hero_image_frame img{
     vertical-align: middle;
-    max-height: 20%;
-    max-width: auto;
+    max-width: 80%;
+    max-height: auto;
     filter: drop-shadow(1px 1px 0 gray) 
             drop-shadow(-1px -1px 0 gray);
 }
@@ -248,17 +248,20 @@ label {
 
 .post_card_description {
     margin-top: 1em;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .post_card_date {
     margin-top: 1em;
     margin-bottom: 1em;
+    color: rgb(163, 163, 163);
 }
 
 .post_card_border {
     width: 80%;
     border-top: 1px solid #A6C9C6;
-    margin-top: 0;
+    margin: 40px auto 40px auto;
 }
 
 /* login, register, create */
@@ -399,13 +402,14 @@ footer p{
         margin: 3em;
     }
 
-    .hero_image_frame img{
-        max-height: 40%;
-    }
-
     .view_logo_create {
         width: 25vw;
     }
+
+    .hero_image_frame img{
+        max-width: 60%;
+    }
+
 }
 
 @media screen and (min-width: 992px){
@@ -413,6 +417,25 @@ footer p{
         background-color: #F0F0F0;
         margin: 3em auto auto auto;
         width: 60vw;
+    }
+
+    .post_card_title {
+        font-size: 2.5em;
+        margin-bottom: 0.6em;
+    }
+
+    .hero_image_frame img {
+        max-width: 50%;
+    }
+
+    .post_card_description {
+        max-width: 50em;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .post_card_image {
+        max-width: 1000px;
     }
 }
 
@@ -425,4 +448,4 @@ footer p{
     margin: 0.5em;
 }
 
-
+}
