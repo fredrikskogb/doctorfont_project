@@ -46,7 +46,6 @@ if(isset($_SESSION['is_logged_in'])){
     }
 
     ?>
-
 <?php
 include 'includes/footer.php';
 ?>
