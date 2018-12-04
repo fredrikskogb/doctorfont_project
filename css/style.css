@@ -110,6 +110,9 @@ label {
 }
 /*logout button*/
 
+.button_logout {
+    float: right;
+}
 .button_logout a {
     color: white;
 }
@@ -191,7 +194,7 @@ label {
 }
 
 .single_post_container {
-    padding-top: 4em;
+    padding-top: 2em;
 }
 .link_all_comments {
     margin-top: 2em;
@@ -395,11 +398,14 @@ footer p {
     
     .navbar_linklist {
         display: flex;
+        margin-bottom: 0;
     }
     
     .navbar_linklist li {
         margin-right: 5em;
     }
+
+    
      
     .navbar_dropdown {
         position: relative;

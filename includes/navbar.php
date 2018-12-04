@@ -1,5 +1,5 @@
-<header class="navbar">
-    <div class="navbar_container">
+<header>
+<nav class="navbar">
         <ul class="navbar_linklist">
 
         <button type="button" class="btn btn-outline-light button"> <li><a href="<?= $ROOT_URL ?>/index.php">Hem</a></li></button>
@@ -23,9 +23,9 @@
                             MENY
                         </a>
                             <div class="dropdown-menu menu_dropdown" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="<?= $ROOT_URL ?>../index.php">Hem</a>
+                                <a class="dropdown-item" href="<?= $ROOT_URL ?>index.php">Hem</a>
                                     <a class="dropdown-item"  href="<?= $ROOT_URL ?>/views/about_us_view.php">Om oss</a>
-                                        <a class="dropdown-item" href="<?= $ROOT_URL ?>/views/categories_view.php">Kategorier</a>
+                                        <a class="dropdown-item" href="<?= $ROOT_URL ?>#">Kategorier</a>
                                     
                         </div>
                     </li>
@@ -33,9 +33,10 @@
             </div>
             </div>     
         </div>
+       
     </div>
-    <div class="navbar_container">
     <button type="button" class="btn btn-outline-light button_logout"><a href="<?= $ROOT_URL ?>/includes/logout.php" id="">Logga ut</a></button>
-        
+
     </div>
+</nav class="navbar">
 </header>
