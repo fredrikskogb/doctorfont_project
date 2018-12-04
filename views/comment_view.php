@@ -34,6 +34,7 @@ if(isset($_SESSION['is_logged_in'])){
         include '../includes/comment_form.php';
         include '../includes/footer.php';
         ?>
+        </div>
     </body>
 </html>
         

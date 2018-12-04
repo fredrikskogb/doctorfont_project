@@ -49,10 +49,12 @@ class Post implements publication {
             ]
         );
 
+        header("Location: ../index.php");
+
     }
 
     public function update(){
-        
+
     }
 
     public function getAllPosts(){

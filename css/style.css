@@ -150,6 +150,11 @@ label {
             drop-shadow(-1px -1px 0 gray);
 }
 
+.new_post {
+    display: block;
+    text-align: center;
+}
+
 /* Styling on post card */
 
 .post_card {
@@ -191,6 +196,9 @@ label {
 .link_all_comments {
     margin-top: 2em;
 }
+
+.edit_post {
+    margin: 0 1em 0 1em;
 
 .link_all_comments a {
     color: gray;
