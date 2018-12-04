@@ -1,6 +1,15 @@
 <?php
 include '../includes/head.php';
 
+if(isset($_GET['update_post'])){
+    include '../includes/database_connection.php';
+    include '../classes/post.php';
+    $edit_post = new Post($pdo);
+    $edit_post->getSinglePost($_GET['update_post']);
+    
+    $placeholder = $edit_post->fetched_post; 
+}
+
 ?>
 <title>Millhouse - Skapa inlägg</title>
 
@@ -22,42 +31,56 @@ include '../includes/head.php';
         <div class="form_container">
             <div>
 
-                <form class="form_views create_views_container" action="../includes/create_post.php" method="POST" enctype="multipart/form-data">
+                <form class="form_views create_views_container" action="<?php if(isset($_GET['update_post'])){echo '../includes/update_post.php';}
+                else{echo '../includes/create_post.php';}?>" method="POST" enctype="multipart/form-data">
 
                     <label for="title">Titel</label>
-                    <input type="text" placeholder="Titel..." name="title" id="title">
+                    <input type="text" placeholder="Titel..." name="title" id="title" value="<?php if(isset($placeholder)){echo $placeholder['title'];} ?>">
 
                     <label for="file">Fil</label>
                     <input type="file" name="image" id="file">
 
                     <label for="summernote">Beskrivning</label>
-                    <textarea type="text" placeholder="Beskrivning..." name="description" id="summernote"></textarea>
+                    <textarea type="text" placeholder="Beskrivning..." name="description" id="summernote"><?php if(isset($placeholder)){echo $placeholder['description'];} ?></textarea>
 
                     <div class="radio_wrapper">
                         <p>Välj kategori:</p>
 
                         <div>
-                            <input type="radio" name="category" value="solglasögon" checked>
+                            <input type="radio" name="category" value="solglasögon" 
+                            <?php if(isset($placeholder['category'])){
+                                    if($placeholder['category'] == "solglasögon")
+                                    {?> checked <?php ;}} else{?> checked <?php } ?>>
                             <label for="huey" class="label_block">Solglasögon</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="category" value="inredningsartiklar">
+                            <input type="radio" name="category" value="inredningsartiklar"
+                            <?php if(isset($placeholder['category'])){
+                                    if($placeholder['category'] == "inredningsartiklar")
+                                    {?> checked <?php ;}} ?> >
                             <label for="dewey" class="label_block">Inredningsartiklar</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="category" value="klockor">
+                            <input type="radio" name="category" value="klockor" 
+                            <?php if(isset($placeholder['category'])){
+                                    if($placeholder['category'] == "klockor")
+                                    {?> checked <?php ;}} ?> >
                             <label for="louie" class="label_block">Klockor</label>
                         </div>
                         
                         <div>
-                            <input type="radio" name="category" value="mode">
+                            <input type="radio" name="category" value="mode" 
+                            <?php if(isset($placeholder['category'])){
+                                    if($placeholder['category'] == "mode")
+                                    {?> checked <?php ;}} ?>>
                             <label for="louie" class="label_block">Mode</label>
                         </div>
                     </div>
 
-                    <input type="submit" value="Lägg till" class="submit">
+                    <input type="submit" value="<?php if(isset($_GET['update_post'])){echo 'Uppdatera';}
+                else{echo 'Lägg til';}?>" class="submit">
                     <script>
                         $(document).ready(function() {
                         $('#summernote').summernote();
