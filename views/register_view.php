@@ -23,8 +23,14 @@ include '../includes/head.php';
                         }
                     } ?>
 
+                     <?php if(isset($_SESSION['taken_username'])){
+                        if($_SESSION['taken_username']){
+                           ?> <p class="login_and_registration_error_message">Användarnamnet är upptaget</p> <?php
+                        }
+                    } ?>
+
                     <label for="password">Lösenord</label>
-                    <input type="text" placeholder="Lösenord, minst 4 tecken" name="password" id="password">
+                    <input type="password" placeholder="Lösenord, minst 4 tecken" name="password" id="password">
 
                     <?php if(isset($_SESSION['invalid_password'])) {
                         if ($_SESSION['invalid_password']) {
@@ -32,12 +38,19 @@ include '../includes/head.php';
                         }
                     } ?>
 
+
                     <label for="mail">E-mail</label>
-                    <input type="text" placeholder="E-mail" name="mail" id="mail">
+                    <input type="email" placeholder="E-mail" name="mail" id="mail">
 
                     <?php if(isset($_SESSION['invalid_email'])) {
                         if ($_SESSION['invalid_email']) {
                             ?> <p class="login_and_registration_error_message">Ogiltig email</p> <?php
+                        }
+                    } ?>
+
+                    <?php if(isset($_SESSION['taken_email'])){
+                        if($_SESSION['taken_email']){
+                           ?> <p class="login_and_registration_error_message">E-postadressen används redan</p> <?php
                         }
                     } ?>
 

@@ -17,7 +17,7 @@ include '../includes/head.php';
                     <input type="text" placeholder="Användarnamn" name="username" id="username">
 
                     <label for="password">Lösenord</label>
-                    <input type="text" placeholder="Lösenord" name="password" id="password">
+                    <input type="password" placeholder="Lösenord" name="password" id="password">
                     
                     <?php if(isset($_GET['login_failed'])){
                             if($_GET['login_failed']){
