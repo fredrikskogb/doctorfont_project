@@ -7,7 +7,7 @@ if(isset($_GET['update_post'])){
     $edit_post = new Post($pdo);
     $edit_post->getSinglePost($_GET['update_post']);
     
-    $placeholder = $edit_post->fetched_post; 
+    $placeholder = $edit_post->fetched_post;
 }
 
 ?>
@@ -79,8 +79,10 @@ if(isset($_GET['update_post'])){
                         </div>
                     </div>
 
+                    <input type="hidden" name="id" value="<?=$_GET['update_post']?>">
+
                     <input type="submit" value="<?php if(isset($_GET['update_post'])){echo 'Uppdatera';}
-                else{echo 'Lägg til';}?>" class="submit">
+                else{echo 'Lägg till';}?>" class="submit">
                     <script>
                         $(document).ready(function() {
                         $('#summernote').summernote();
