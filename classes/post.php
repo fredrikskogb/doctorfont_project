@@ -53,8 +53,29 @@ class Post implements publication {
 
     }
 
-    public function update(){
+    public function update($title, $image, $description, $category, $created_by, $id){
 
+        $temporary_location = $image["tmp_name"];
+
+        $new_location = "../uploads/" . $image["name"];
+
+        $upload_ok = move_uploaded_file($temporary_location, $new_location);
+
+        if($upload_ok){
+            $statement = $this->pdo->prepare("UPDATE posts SET title = :title, image = :image, description = :description, category = :category, created_by = :created_by WHERE id = :id");
+
+            $statement->execute(
+                [
+                    ":title" => $title,
+                    ":image" => $new_location,
+                    ":description" => $description,
+                    ":category" => $category,
+                    ":created_by" => $created_by, 
+                    ":id" => $id
+                ]
+            );
+        }
+        header("Location: ../index.php");
     }
 
     public function getAllPosts(){
