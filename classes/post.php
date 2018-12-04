@@ -55,7 +55,7 @@ class Post implements publication
     }
 
     public function update($id){
-        statement = $this->pdo->prepare("UPDATE");
+        $statement = $this->pdo->prepare("UPDATE");
     }
 
     public function getAllPosts(){
