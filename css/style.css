@@ -266,6 +266,7 @@ label {
 
 .text_views {
     color: white;
+    margin: 0 0.5em;
 }
 
 .label_block {
@@ -298,6 +299,7 @@ label {
     border-radius: 5px;
     background-color: #A6C9C6;
     color: white;
+    margin: 0 0.5em;
 }
 
 .submit_comments:hover {
