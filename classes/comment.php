@@ -1,9 +1,8 @@
 <?php
 
-include 'interface.php';
-
-class Comment implements publication{
+class Comment {
     private $pdo;
+    public $fetched_comments;
 
     public function __construct($pdo){
         $this->pdo = $pdo;
@@ -22,7 +21,21 @@ class Comment implements publication{
             ":post_id" => $post_id,
             ":created_by" => $created_by
          ]);
-
+        
     }
 
+    public function getComment($post_id){
+
+        $statement = $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id");
+        $statement->execute(
+            [
+                ":post_id" => $post_id
+            ]
+        );
+
+        $fetched_comments = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        $this->fetched_comments = $fetched_comments;
+
+    }
 }

@@ -16,3 +16,6 @@ include 'head.php';
 <input type="hidden" value="<?=$_SESSION['user_id']?>" name="created_by">
 <input type="submit" value="Lägg till kommentar" class="submit submit_comments">
 </div>
+
+<?php
+

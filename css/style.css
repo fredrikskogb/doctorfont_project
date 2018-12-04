@@ -310,6 +310,13 @@ label {
     background-color:#90bbb8;
 }
 
+/* comment_view */
+
+.single_comment {
+    margin: 0 auto;
+    width: 80%;
+}
+
 
 
 /* about_us */

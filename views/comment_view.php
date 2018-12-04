@@ -4,6 +4,7 @@ include '../config.php';
 include '../includes/head.php';
 include '../includes/database_connection.php';
 include '../classes/post.php';
+include '../classes/comment.php';
 
 if(isset($_SESSION['is_logged_in'])){
     if($_SESSION['is_logged_in'] === false){
@@ -27,10 +28,14 @@ if(isset($_SESSION['is_logged_in'])){
         $post = new Post($pdo);
         $post->getSinglePost($_GET['post']);
         $_POST['post_id'] = $_GET['post'];
+
+        $comment = new Comment($pdo);
+        $comment->getComment($_POST['post_id']);
         ?>
         <div class="single_post_container">
         <?php
         include '../includes/single_post_card.php';
+        include '../includes/all_comments.php';
         include '../includes/comment_form.php';
         include '../includes/footer.php';
         ?>
