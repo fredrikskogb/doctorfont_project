@@ -199,7 +199,7 @@ label {
 
 .edit_post {
     margin: 0 1em 0 1em;
-
+}
 .link_all_comments a {
     color: gray;
     
@@ -280,6 +280,7 @@ label {
 
 .login_and_registration_error_message {
     color: white;
+    margin: 0 0.5em;
 }
 
 /* comments_form */
