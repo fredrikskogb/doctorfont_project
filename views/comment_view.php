@@ -27,7 +27,7 @@ if(isset($_SESSION['is_logged_in'])){
         include '../includes/navbar.php';
         $post = new Post($pdo);
         $post->getSinglePost($_GET['post']);
-        $_POST['post_id'] = $_GET['post'];
+        $_POST['post_id'] = $_GET['post'];          
 
         $comment = new Comment($pdo);
         $comment->getComment($_POST['post_id']);
