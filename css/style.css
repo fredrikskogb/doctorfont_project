@@ -99,9 +99,13 @@ label {
     background-color: #90bbb8;
 }
 
+.navbar_dropdown_content {
+    padding: 0.5em 0 0.5em 0;
+}
+
 .navbar_dropdown_content a {
     display: block;
-    margin: 0.25em 0 0.5em 0;
+    padding: 0.3em;
 }
 
 .navbar_dropdown_content a:hover {
@@ -438,7 +442,6 @@ footer p {
         background-color: #A6C9C6;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
         z-index: 1;
         color: white;
     }
