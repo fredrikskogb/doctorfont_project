@@ -38,9 +38,17 @@ if(isset($_SESSION['is_logged_in'])){
         $all_posts = new Post($pdo);
         $all_posts->getAllPosts();
 
-        
-        foreach($all_posts->fetched_posts as $post){
-            include 'includes/post_card.php';
+        $posts_category = new Post($pdo);
+        $posts_category->getSingleCategory($_GET["category"]);
+
+        if(!isset($_GET["category"])){
+            foreach($all_posts->fetched_posts as $post){
+                include 'includes/post_card.php';
+            }
+        }elseif(isset($_GET["category"])){
+            foreach($posts_category->fetched_category as $post){
+                include 'includes/post_card.php';
+            }
         }
 
         ?>

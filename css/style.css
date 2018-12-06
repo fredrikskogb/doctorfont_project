@@ -99,6 +99,9 @@ label {
     background-color: #90bbb8;
 }
 
+.navbar_dropdown_content a {
+    display: block;
+}
 
 .dropdown-toggle {
     font-size: 0.9rem;
