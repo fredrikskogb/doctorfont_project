@@ -1,12 +1,3 @@
-
-<?php
-
-include 'head.php';
-
-
-?>
-
-</head>
 <div class="comments_form_container">
 <form class="form_views create_views_container form_views_comments" action="../includes/create_comment.php" method="POST">
 
