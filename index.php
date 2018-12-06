@@ -26,7 +26,8 @@ if(isset($_SESSION['is_logged_in'])){
 
         <div class="hero_image_frame">
             <span class="hero_image_inline_helper"></span>
-            <img class="hero_image_millhouse_logo"src="images/logo_light.png">
+            <img class="hero_image_millhouse_logo" src="images/logo_light.png">
+            <img src="images/header_arrow.png" alt="Arrow" id="hero_image_arrow">
             
         </div>
         <?php
