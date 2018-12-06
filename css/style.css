@@ -496,6 +496,11 @@ footer p {
         max-width: 1000px;
     }
 
+    .single_comment {
+        max-width: 1000px;
+
+}
+
 }
 
 #file {
@@ -506,5 +511,4 @@ footer p {
     height: 150px;
     margin: 0.5em;
 }
-
 
