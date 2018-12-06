@@ -196,6 +196,11 @@ label {
     margin: 40px auto 40px auto;
 }
 
+.category_error {
+    text-align: center;
+    margin-top: 1em;
+}
+
 .single_post_container {
     padding-top: 2em;
 }
