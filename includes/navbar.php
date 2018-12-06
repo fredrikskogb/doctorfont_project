@@ -8,9 +8,10 @@
 
                 <button type="button" class="btn btn-outline-light button"><span>Kategorier</span></button>
                 <div class="navbar_dropdown_content">
-                    <a href="#">Kategori 1</a>
-                    <a href="#">Kategori 2</a>
-                    <a href="#">Kategori 3</a>
+                    <a href="<?= $ROOT_URL ?>/index.php?category=solglasögon">Solglasögon</a>
+                    <a href="<?= $ROOT_URL ?>/index.php?category=inredningsartiklar">Inredningsartiklar</a>
+                    <a href="<?= $ROOT_URL ?>/index.php?category=klockor">Klockor</a>
+                    <a href="<?= $ROOT_URL ?>/index.php?category=mode">Mode</a>
                 </div>
             </li>
         </ul>
