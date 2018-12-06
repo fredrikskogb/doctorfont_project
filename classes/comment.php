@@ -9,7 +9,7 @@ class Comment {
 
 }
 
-    public function create($content, $post_id, $created_by){
+    public function create($content, $post_id, $created_by) {
 
         $created_by = $_SESSION['user_id'];
 
@@ -23,10 +23,11 @@ class Comment {
          ]);
         
     }
+  
 
     public function getComment($post_id){
 
-        $statement = $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id");
+        $statement = $this->pdo->prepare("SELECT * FROM comments INNER JOIN users ON users.id = comments.created_by WHERE post_id = :post_id");
         $statement->execute(
             [
                 ":post_id" => $post_id
