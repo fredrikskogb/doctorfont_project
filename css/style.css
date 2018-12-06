@@ -349,9 +349,22 @@ label {
 
 /* comment_view */
 
-.single_comment {
+.single_comment_container {
     margin: 0 auto;
     width: 80%;
+}
+
+.single_comment {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+.delete_comment_button {
+    background-color: red;
+    width: 100px;
 }
 
 
@@ -533,7 +546,7 @@ footer p {
         max-width: 1000px;
     }
 
-    .single_comment {
+    .single_comment_container {
         max-width: 1000px;
 
 }
