@@ -99,6 +99,9 @@ label {
     background-color: #90bbb8;
 }
 
+.navbar_dropdown_content a {
+    display: block;
+}
 
 .dropdown-toggle {
     font-size: 0.9rem;
@@ -191,6 +194,11 @@ label {
     width: 80%;
     border-top: 1px solid #A6C9C6;
     margin: 40px auto 40px auto;
+}
+
+.category_error {
+    text-align: center;
+    margin-top: 1em;
 }
 
 .single_post_container {

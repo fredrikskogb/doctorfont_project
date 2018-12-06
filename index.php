@@ -37,14 +37,28 @@ if(isset($_SESSION['is_logged_in'])){
 
         $all_posts = new Post($pdo);
         $all_posts->getAllPosts();
-
         
-        foreach($all_posts->fetched_posts as $post){
-            include 'includes/post_card.php';
+        /* If category is not set, display all posts
+         * Else if category is set, display set category
+         * If there are no posts in that category, display error text
+        */ 
+        if(!isset($_GET["category"])){
+            foreach($all_posts->fetched_posts as $post){
+                include 'includes/post_card.php';
+            }
+        }elseif(isset($_GET["category"])){
+            $posts_category = new Post($pdo);
+            $posts_category->getSingleCategory($_GET["category"]);
+            foreach($posts_category->fetched_category as $post){
+                include 'includes/post_card.php';
+            }
+            if(isset($_GET["category"])){
+                if(!isset($post["title"])){?>
+                <p class="category_error">Det finns inga inlägg i denna kategori.</p>
+            <?php }
+            }
         }
 
-        ?>
-        <?php
         include 'includes/footer.php';
         ?>
 

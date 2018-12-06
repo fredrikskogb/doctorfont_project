@@ -9,6 +9,8 @@ class Post implements publication {
 
     public $fetched_post;
 
+    public $fetched_category;
+
     public function __construct($pdo){
         $this->pdo = $pdo;
     }
@@ -86,6 +88,21 @@ class Post implements publication {
         $fetched_posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         $this->fetched_posts = $fetched_posts;
+
+    }
+
+    public function getSingleCategory($category){
+
+        $statement = $this->pdo->prepare("SELECT * FROM posts WHERE category = :category ORDER BY date DESC");
+        $statement->execute(
+            [
+                ":category" => $category,
+            ]
+        );
+
+        $fetched_category = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        $this->fetched_category = $fetched_category;
 
     }
 
