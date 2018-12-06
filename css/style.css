@@ -101,6 +101,11 @@ label {
 
 .navbar_dropdown_content a {
     display: block;
+    margin: 0.25em 0 0.5em 0;
+}
+
+.navbar_dropdown_content a:hover {
+    background-color: rgb(122, 148, 146);
 }
 
 .dropdown-toggle {
