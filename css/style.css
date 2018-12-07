@@ -120,6 +120,31 @@ label {
 .dropdown li a {
     color:white;
 }
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons_wrapper {
+    display: none;
+    margin-right: 1em;
+}
+
+.icons_wrapper_footer {
+    display: block;
+}
+
+.icons_wrapper_footer img {
+    height: 2em;
+    margin: 0 1em 1.5em 1em;
+}
+
+.icons img {
+    height: 1.5em;
+    margin-right: 1em;
+}
+
 /*logout button*/
 
 .button_logout {
@@ -420,6 +445,18 @@ footer p {
     font-size: 0.8em;
 }
 
+@media screen and (min-width: 480px){
+
+    .icons_wrapper_footer {
+        display: none;
+    }
+
+    .icons_wrapper {
+        display: block;
+    }
+
+}
+
 @media screen and (min-width: 768px){
 
     .card {
@@ -557,3 +594,4 @@ footer p {
     margin: 0.5em;
 }
 
+}
