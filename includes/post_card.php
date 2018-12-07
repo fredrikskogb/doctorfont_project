@@ -12,9 +12,15 @@
             <a href="includes/delete_post.php?remove_post=<?=$post['id']?>" class="edit_post">Ta bort inlägg</a>
         <?php } ?>
     <p class="post_card_date"><?=$date;?></p>
-    <div class="post_card_image_frame">
-        <img class="post_card_image" src="<?= $image;?>" alt="Bild för inlägget <?=$post['title'];?>">
-    </div>
+
+    <?php
+        if($image != false){?>
+            <div class="post_card_image_frame">
+                <img class="post_card_image" src="<?= $image;?>" alt="Bild för inlägget <?=$post['title'];?>">
+            </div>
+        <?php } 
+    ?>
+
     <div class="post_card_description">
         <?=$post["description"];?>
     </div>

@@ -31,6 +31,10 @@ class Post implements publication {
             $_SESSION['description'] = true;
         }
 
+        // Make it possible to make post with or without image.
+
+
+
         $created_by = $_SESSION['user_id'];
 
         $temporary_location = $image['tmp_name'];
@@ -52,7 +56,18 @@ class Post implements publication {
             ":created_by" => $created_by
          ]);
 
-    }
+        }else{
+            $statement = $this->pdo->prepare("INSERT INTO posts (title, image, description, category, created_by)
+            VALUES (:title, :image, :description, :category, :created_by)");
+
+            $statement->execute([
+                ":title" => $title,
+                ":image" => false,
+                ":description" => $description,
+                ":category" => $category,
+                ":created_by" => $created_by
+            ]);
+            }
 }
 
 
