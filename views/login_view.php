@@ -6,11 +6,21 @@ include '../includes/head.php';
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body class="body_view">
+    <div class="login_container">
     <main class="main_login_register">
         <div class="image_container">
-            <img class="view_logo" src="../images/logo_light.png" alt="millhouse">
+            <img class="view_logo" src="../images/logo_dark.png" alt="millhouse">
         </div>
+
+         <div class="about_us_login">
+
+<p> Millhouse är ett grossistföretag som säljer kläder, 
+accesoarer och mindre inredningsartiklar till mode- och livsstilsbutiker.</p>
+
+</div>
+
         <div class="form_container">
+
             <div>
                 <form method="POST" class="form_views" action="../includes/login.php">
                     <label for="username">Användarnamn</label>
@@ -26,13 +36,15 @@ include '../includes/head.php';
                         }
                     ?>
 
-                    <input type="submit" value="Logga in">
+                    <input class="login_button" type="submit" value="Logga in">
                 </form>
                 <div>
                     <p class="text_views">Inte medlem? <a class="href_views" href="register_view.php">Registrera dig här</a></p>
                 </div>
+            
             </div>
         </div>
     </main>
+</div>
 </body>
 </html>
