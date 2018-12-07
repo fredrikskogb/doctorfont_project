@@ -5,8 +5,15 @@ foreach($comment->fetched_comments as $single_fetched_comment){
     echo $single_fetched_comment['username'] . "<br />";
 
     echo $single_fetched_comment['content'] . "</p>";
-    ?><a href="../includes/delete_comment.php"><img src="../images/cross_icon.png" alt="Delete comment" class="delete_comment_button"></a> <?php
-    var_dump($fetched_comments);
+    ?>
+    <form action="../includes/delete_comment.php">
+        <input type="image" src="../images/cross_icon.png" alt="Submit form" class="delete_comment_button" />
+        <input type="hidden" name="comment_id" value="<?=$single_fetched_comment['id']?>">
+        <input type="hidden" name="user_id" value="<?=$single_fetched_comment['user_id']?>">
+    </form>
+    
+    <?php
+    var_dump($single_fetched_comment['user_id']);
     ?></div><?php
     echo "<hr>";
 }
