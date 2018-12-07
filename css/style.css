@@ -288,7 +288,7 @@ label {
     background-position: center center;
     object-fit: cover;
     content: "";
-    opacity: 0.3;
+    opacity: 0.4;
     top: 0;
     left: 0;
     bottom: 0;
@@ -314,7 +314,7 @@ label {
 }
 
 .view_logo {
-    width: 30vw;
+    width: 55vw;
     margin-bottom: 4em;
     filter: drop-shadow(1px 1px 0 lightgray) 
     drop-shadow(-1px -1px 0 lightgray);
@@ -324,18 +324,20 @@ label {
     margin: 0 auto;
 }
 
-.about_us_login { 
+.about_us_login_and_register{ 
     font-size: 1.2em;
     font-style: italic;
     font-weight: bold;
-    width: 40vw;
+    width: 60vw;
     margin: 0 auto;
     text-align: center;
     line-height: 1.5em;
     color: #1C3045;
-
-
+    filter: drop-shadow(0.3px 0.3px 0 lightgray) 
+    drop-shadow(-0.3px -0.3px 0 lightgray);
 }
+
+
 
 .form_views {
     display: flex;
@@ -351,11 +353,9 @@ label {
     border-radius: 0.3em;
 }
 
-.login_button { 
-    background-color: #A6C9C6;
+.login_and_register_button { 
+    background-color: #90bbb8;
     color: white;
-    font-family: 
-
 }
 
 .create_views_container {
@@ -381,7 +381,8 @@ label {
 }
 
 .href_views:hover {
-    color: #90bbb8;;
+    color: #619e9a;
+    
 }
 
 .text_views {
@@ -401,6 +402,7 @@ label {
 .login_and_registration_error_message {
     color: #1C3045;
     margin: 0 0.5em;
+    font-weight: bold;
 }
 
 /* comments_form */
@@ -450,11 +452,11 @@ label {
 /* about_us */
 
 .about_us {
-    padding-top: 5em;
+    padding-top: 3em;
 }
 
 .about_us_container {
-    background-color: #1C3045;
+    background-color: #F0F0F0;
     
 }
 
@@ -466,23 +468,16 @@ label {
 
 .heading h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3em;
+    margin-bottom: 0.5em;
     
 }
 
 .text_about_us p {
     text-align: center;
     font-size: 1rem;
-    margin: 1.5em;
-    
-}
-
-.card {
-    background-color: #F0F0F0;
-    box-shadow: 5px 5px 8px 5px black;
-    margin: 1em;
-    padding: 1em;
-
+    margin: 0 auto;
+    width: 50vw;
 }
 
 /* creat_footer */
@@ -516,9 +511,12 @@ footer p {
 
 @media screen and (min-width: 768px){
 
-    .card {
-        background-color: #F0F0F0;
-        margin: 3em;
+    .view_logo {
+        width: 40vw;
+    }
+
+    .about_us_login_and_register {
+        width: 40vw;
     }
 
     .view_logo_create {
@@ -603,10 +601,9 @@ footer p {
 
 
 @media screen and (min-width: 992px){
-    .card {
-        background-color: #F0F0F0;
-        margin: 3em auto auto auto;
-        width: 60vw;
+
+    .view_logo {
+        width: 35vw;
     }
 
     .post_card_title {

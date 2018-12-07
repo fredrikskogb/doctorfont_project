@@ -12,7 +12,7 @@ include '../includes/head.php';
             <img class="view_logo" src="../images/logo_dark.png" alt="millhouse">
         </div>
 
-         <div class="about_us_login">
+         <div class="about_us_login_and_register">
 
 <p> Millhouse är ett grossistföretag som säljer kläder, 
 accesoarer och mindre inredningsartiklar till mode- och livsstilsbutiker.</p>
@@ -36,7 +36,7 @@ accesoarer och mindre inredningsartiklar till mode- och livsstilsbutiker.</p>
                         }
                     ?>
 
-                    <input class="login_button" type="submit" value="Logga in">
+                    <input class="login_and_register_button" type="submit" value="Logga in">
                 </form>
                 <div>
                     <p class="text_views">Inte medlem? <a class="href_views" href="register_view.php">Registrera dig här</a></p>
