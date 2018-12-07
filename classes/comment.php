@@ -37,17 +37,16 @@ class Comment {
         $fetched_comments = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         $this->fetched_comments = $fetched_comments;
-        var_dump($this->fetched_comments);
 
     }
 
-    public function deleteComment($post_id, $user){
+    public function deleteComment($comment_id, $user_id){
 
-        $statement = $this->pdo->prepare("DELETE FROM comments WHERE :post_id = id AND :user = created_by");
+        $statement = $this->pdo->prepare("DELETE FROM comments WHERE :comment_id = id AND :user_id = created_by");
         $statement->execute(
             [
-                ":post_id" => $post_id,
-                ":user" => $user
+                ":comment_id" => $comment_id,
+                ":user_id" => $user_id
             ]
         );
 

@@ -1,8 +1,10 @@
 <?php
-include 'databease_connection.php';
+include '../includes/database_connection.php';
 include '../classes/comment.php';
 
 $delete_comment = new Comment($pdo);
-$delete_comment->deleteComment($single_fetched_comment['id'], $user);
+$delete_comment->deleteComment($_POST['comment_id'], $_SESSION['user_id']);
 
-header ('Location: ../views/comment_view.php');
+//header ('Location: ../views/comment_view.php?post=' . <?=$_POST['post_id']
+
+header ('Location: ../views/comment_view.php?post=' . $_POST['post_id']);
