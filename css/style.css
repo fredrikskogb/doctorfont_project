@@ -360,11 +360,9 @@ label {
     justify-content: space-between;
 }
 
-
-
 .delete_comment_button {
-    background-color: red;
-    width: 100px;
+    max-width: 30px;
+    height: auto;
 }
 
 

@@ -5,7 +5,7 @@ foreach($comment->fetched_comments as $single_fetched_comment){
     echo $single_fetched_comment['username'] . "<br />";
 
     echo $single_fetched_comment['content'] . "</p>";
-    ?><p class="delete_comment_button">DELETE [X]</p> <?php
+    ?><a href="#"><img src="../images/cross_icon.png" alt="Delete comment" class="delete_comment_button"></a> <?php
     
     ?></div><?php
     echo "<hr>";
