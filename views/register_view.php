@@ -9,7 +9,14 @@ include '../includes/head.php';
 <body class="body_view">
     <main class="main_login_register">
         <div class="image_container">
-            <img class="view_logo" src="../images/logo_light.png" alt="millhouse">
+            <img class="view_logo" src="../images/logo_dark.png" alt="millhouse">
+        </div>
+
+        <div class="about_us_login_and_register">
+
+        <p> Millhouse är ett grossistföretag som säljer kläder, 
+        accesoarer och mindre inredningsartiklar till mode- och livsstilsbutiker.</p>
+
         </div>
         <div class="form_container">
             <div>
@@ -54,7 +61,7 @@ include '../includes/head.php';
                         }
                     } ?>
 
-                    <input type="submit" value="Registrera">
+                    <input class="login_and_register_button" type="submit" value="Registrera">
                 </form>
                 <div>
                     <p class="text_views">Redan medlem? <a class="href_views" href="login_view.php">Logga in här</a></p>
