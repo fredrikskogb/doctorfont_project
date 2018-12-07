@@ -32,7 +32,7 @@ if(isset($_GET['update_post'])){
         <div class="form_container">
             <div>
 
-                <form class="form_views create_views_container" action="<?php if(isset($_GET['update_post'])){echo '../includes/update_post.php';}
+                <form class="form_views create_views_container" action="<?php if(isset($_GET['update_post'])){echo '../includes/update_post.php?remove_image=' . $_GET["update_post"];}
                 else{echo '../includes/create_post.php';}?>" method="POST" enctype="multipart/form-data">
 
                     <label for="title">Titel</label>
@@ -47,7 +47,8 @@ if(isset($_GET['update_post'])){
 
                     <label for="file">Fil</label>
                     <input type="file" name="image" id="file">
-                    <a href="../includes/remove_image.php?remove_image=<?=$_GET["update_post"];?>">Ta bort bild</a>
+                    <label for="delete" class="label_block_file">Ta bort bild</label>
+                    <input type="checkbox" name="delete" value="<?=$_GET['update_post']?>">
 
                     <label for="summernote">Beskrivning</label>
                     <textarea type="text" placeholder="Beskrivning..." name="description" id="summernote"><?php if(isset($placeholder)){echo $placeholder['description'];} ?></textarea>

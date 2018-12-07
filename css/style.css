@@ -347,6 +347,11 @@ label {
     display: inline;
 }
 
+.label_block_file {
+    display: inline;
+    color: white;
+}
+
 .radio_wrapper {
     color: white;
     margin: 0.5em;
