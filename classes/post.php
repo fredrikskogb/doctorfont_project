@@ -17,22 +17,18 @@ class Post implements publication {
 
     public function create($title, $image, $description, $category){
 
+        // If input is empty on create_post.php, create a session to use on displaying error.
+
         if(strlen($title) < 1){
             $_SESSION['title'] = false;
         } else{
             $_SESSION['title'] = true;
         }
         
-        if(strlen($password) < 1){
-            $_SESSION['invalid_password'] = true;
+        if(strlen($description) < 1){
+            $_SESSION['description'] = false;
         } else{
-            $_SESSION['invalid_password'] = false;
-        }
-        
-        if(strlen($email) < 1){
-            $_SESSION['invalid_email'] = true;
-        } else{
-            $_SESSION['invalid_email'] = false;
+            $_SESSION['description'] = true;
         }
 
         $created_by = $_SESSION['user_id'];

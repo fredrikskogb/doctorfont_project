@@ -354,7 +354,7 @@ label {
 
 .login_and_registration_error_message {
     color: white;
-    margin: 0 0.5em;
+    margin: 0.5em;
 }
 
 /* comments_form */
@@ -586,6 +586,7 @@ footer p {
 }
 
 #file {
+    font-family: 'Open Sans', sans-serif;
     color: white;
 }
 
