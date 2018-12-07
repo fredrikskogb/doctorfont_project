@@ -54,7 +54,7 @@ table {
 }
 
 /* General css */
-p, li, a, label {
+p, li, a, input, label {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -256,9 +256,22 @@ label {
 
 /* login, register, create */
 
-.body_view {
-    background-color: #1C3045;
-}
+.body_view::after {
+    background-image: url("../images/heder_millhouse.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    content: "";
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
 
 .main_login_register {
     display: flex;
@@ -277,25 +290,53 @@ label {
 
 .view_logo {
     width: 30vw;
+    margin-bottom: 4em;
+    filter: drop-shadow(1px 1px 0 lightgray) 
+    drop-shadow(-1px -1px 0 lightgray);
 }
 
 .form_container {
     margin: 0 auto;
 }
 
+.about_us_login { 
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    width: 40vw;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5em;
+    color: #1C3045;
+
+
+}
+
 .form_views {
     display: flex;
     flex-direction: column;
-    width: 17em;
+    width: 20em;
+    margin-top: 2em;
+    
+    
+}
+
+.form_views input {
+    margin: 0.5em;
+    border-radius: 0.3em;
+}
+
+.login_button { 
+    background-color: #A6C9C6;
+    color: white;
+    font-family: 
+
 }
 
 .create_views_container {
     width: 25em;
 }
 
-.form_views input {
-    margin: 0.5em;
-}
 
 #title {
     width: 12.5em;
@@ -310,11 +351,16 @@ label {
 }
 
 .href_views {
-    color: #95B8D1;
+    color:#1C3045;
+    font-weight: bold;
+}
+
+.href_views:hover {
+    color: #90bbb8;;
 }
 
 .text_views {
-    color: white;
+    color: #1C3045;
     margin: 0 0.5em;
 }
 
@@ -328,7 +374,7 @@ label {
 }
 
 .login_and_registration_error_message {
-    color: white;
+    color: #1C3045;
     margin: 0 0.5em;
 }
 
