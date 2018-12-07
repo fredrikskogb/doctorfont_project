@@ -7,29 +7,35 @@ include '../includes/head.php';
 
 <body class="about_us_container">
 
-    <?php include '../includes/navbar.php'; ?>
+    <?php
+    include '../includes/navbar.php'; 
+    include '../includes/hero_image.php';
+    ?>
+
 
         <main class="about_us">
 
             <div class="image_container">
-                <img class="view_logo_about_us" src="../images/logo_light.png" alt="millhouse">
-                
-                <div class="card">
-                    <div class="col-12 heading">
-                        <h1>Om oss på Millhouse</h1>
+            
+    
+                 <div class="col-12 heading">
+                        <h1>OM OSS</h1>
                     </div>
 
                      <div class="text_about_us">
-                        <p>  Millhouse är ett grossistföretag som säljer kläder, accesoarer och mindre inredningsartiklar till mode- och livsstilsbutiker.</p>
+                        <p>  Millhouse är ett grossistföretag som säljer kläder, accesoarer och mindre inredningsartiklar till mode- och livsstilsbutiker.</p><br />
                         
                         <p>  Nu tycker vi på Millhouse att det är dags att starta något eget.
                              Så detta är starten på Millhouse bloggforum. 
-                             Och kände att vi ville ha ett sätt uppdatera nyhter och inspration på, och då tycker vi att ett bloggforum är ett roligt sätt att presentera det på.</p> 
-                        <p>  Vi kommer lägga upp inlägg på artiklar som klockor - solglasögon - mindre inredningsartiklar där ni kan vara med att kommentera och ge era önskemål på.</p>
-                     </div>
+                             Och kände att vi ville ha ett sätt uppdatera nyhter och inspration på, och då tycker vi att ett bloggforum är ett roligt sätt att presentera det på.</p><br /> 
+                        <p>  Vi kommer lägga upp inlägg på artiklar som klockor - solglasögon - mindre inredningsartiklar där ni kan vara med att kommentera och ge era önskemål på.</p><br /> 
                  </div>
+                
          </main>               
-                                        
+            
+         <?php
+         include '../includes/footer.php';
+         ?>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

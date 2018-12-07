@@ -22,14 +22,11 @@ if(isset($_SESSION['is_logged_in'])){
 
 </head>
     <body>
-        <?php include 'includes/navbar.php';?>
+        <?php 
+        include 'includes/navbar.php';
+        include 'includes/hero_image.php';
+        ?>
 
-        <div class="hero_image_frame">
-            <span class="hero_image_inline_helper"></span>
-            <img class="hero_image_millhouse_logo" src="images/logo_light.png">
-            <img src="images/header_arrow.png" alt="Arrow" id="hero_image_arrow">
-            
-        </div>
         <?php
         if($_SESSION['is_admin'] === true){?>
         <a href="views/create_post_view.php" class="new_post">Skapa nytt inlägg</a>
