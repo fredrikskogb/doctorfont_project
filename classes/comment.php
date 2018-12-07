@@ -26,17 +26,28 @@ class Comment {
   
 
     public function getComment($post_id){
-
-        $statement = $this->pdo->prepare("SELECT * FROM comments INNER JOIN users ON users.id = comments.created_by WHERE post_id = :post_id");
+        
+        $statement = $this->pdo->prepare("SELECT comments.*, users.id as user_id, users.username, is_admin FROM comments INNER JOIN users ON users.id = comments.created_by WHERE post_id = :post_id");
         $statement->execute(
             [
                 ":post_id" => $post_id
             ]
         );
-
+        
         $fetched_comments = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         $this->fetched_comments = $fetched_comments;
+
+    }
+
+    public function deleteComment($comment_id){
+
+        $statement = $this->pdo->prepare("DELETE FROM comments WHERE :comment_id = id");
+        $statement->execute(
+            [
+                ":comment_id" => $comment_id
+            ]
+        );
 
     }
 }
