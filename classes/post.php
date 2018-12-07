@@ -33,8 +33,6 @@ class Post implements publication {
 
         // Make it possible to make post with or without image.
 
-
-
         $created_by = $_SESSION['user_id'];
 
         $temporary_location = $image['tmp_name'];
