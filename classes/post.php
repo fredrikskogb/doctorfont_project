@@ -82,6 +82,19 @@ class Post implements publication {
 
     }
 
+    public function deleteImage($id){
+        $statement = $this->pdo->prepare("UPDATE posts SET image = false WHERE id = :id");
+
+        $statement->execute(
+            [
+                ":id" => $id
+            ]
+        );
+
+        header("Location: $ROOT_URL/doctorfont_project/views/create_post_view.php?update_post=$id");
+
+    }
+
     public function update($title, $image, $description, $category, $created_by, $id){
 
         $temporary_location = $image["tmp_name"];

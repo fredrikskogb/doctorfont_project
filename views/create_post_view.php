@@ -47,6 +47,7 @@ if(isset($_GET['update_post'])){
 
                     <label for="file">Fil</label>
                     <input type="file" name="image" id="file">
+                    <a href="../includes/remove_image.php?remove_image=<?=$_GET["update_post"];?>">Ta bort bild</a>
 
                     <label for="summernote">Beskrivning</label>
                     <textarea type="text" placeholder="Beskrivning..." name="description" id="summernote"><?php if(isset($placeholder)){echo $placeholder['description'];} ?></textarea>
