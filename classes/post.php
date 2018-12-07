@@ -17,6 +17,24 @@ class Post implements publication {
 
     public function create($title, $image, $description, $category){
 
+        if(strlen($title) < 1){
+            $_SESSION['title'] = false;
+        } else{
+            $_SESSION['title'] = true;
+        }
+        
+        if(strlen($password) < 1){
+            $_SESSION['invalid_password'] = true;
+        } else{
+            $_SESSION['invalid_password'] = false;
+        }
+        
+        if(strlen($email) < 1){
+            $_SESSION['invalid_email'] = true;
+        } else{
+            $_SESSION['invalid_email'] = false;
+        }
+
         $created_by = $_SESSION['user_id'];
 
         $temporary_location = $image['tmp_name'];
