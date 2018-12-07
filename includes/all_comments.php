@@ -5,8 +5,7 @@ foreach($comment->fetched_comments as $single_fetched_comment){
     echo $single_fetched_comment['username'] . "<br />";
 
     echo $single_fetched_comment['content'] . "</p>";
-    
-    if ($single_fetched_comment['user_id'] == $_SESSION['user_id']) {
+    if ($single_fetched_comment['user_id'] == $_SESSION['user_id'] || $_SESSION['is_admin']) {
         ?>
 
     <form action="../includes/delete_comment.php" method="POST">

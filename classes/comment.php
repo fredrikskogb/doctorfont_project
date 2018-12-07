@@ -40,13 +40,12 @@ class Comment {
 
     }
 
-    public function deleteComment($comment_id, $user_id){
+    public function deleteComment($comment_id){
 
-        $statement = $this->pdo->prepare("DELETE FROM comments WHERE :comment_id = id AND :user_id = created_by");
+        $statement = $this->pdo->prepare("DELETE FROM comments WHERE :comment_id = id");
         $statement->execute(
             [
-                ":comment_id" => $comment_id,
-                ":user_id" => $user_id
+                ":comment_id" => $comment_id
             ]
         );
 
