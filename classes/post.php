@@ -117,7 +117,23 @@ class Post implements publication {
                 ]
             );
         }
-        header("Location: ../index.php");
+    }
+
+    public function updateKeepImage($title, $description, $category, $created_by, $id){
+
+        
+            $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, category = :category, created_by = :created_by WHERE id = :id");
+
+            $statement->execute(
+                [
+                    ":title" => $title,
+                    ":description" => $description,
+                    ":category" => $category,
+                    ":created_by" => $created_by, 
+                    ":id" => $id
+                ]
+            );
+        
     }
 
     public function getAllPosts(){
