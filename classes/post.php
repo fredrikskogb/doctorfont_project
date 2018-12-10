@@ -19,14 +19,10 @@ class Post implements publication {
 
         // If input is empty on create_post.php, create a session to use on displaying error.
 
+        $_SESSION['title'] = true;
         
-            $_SESSION['title'] = true;
+        $_SESSION['description'] = true;
         
-        
-        
-            $_SESSION['description'] = true;
-        
-
         // Make it possible to make post with or without image.
 
         $created_by = $_SESSION['user_id'];
@@ -93,6 +89,10 @@ class Post implements publication {
 
     public function update($title, $image, $description, $category, $created_by, $id){
 
+        $_SESSION['title'] = true;
+        
+        $_SESSION['description'] = true;
+
         $temporary_location = $image["tmp_name"];
 
         $new_location = "../uploads/" . $image["name"];
@@ -117,18 +117,21 @@ class Post implements publication {
 
     public function updateKeepImage($title, $description, $category, $created_by, $id){
 
+        $_SESSION['title'] = true;
         
-            $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, category = :category, created_by = :created_by WHERE id = :id");
+        $_SESSION['description'] = true;
+        
+        $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, category = :category, created_by = :created_by WHERE id = :id");
 
-            $statement->execute(
-                [
-                    ":title" => $title,
-                    ":description" => $description,
-                    ":category" => $category,
-                    ":created_by" => $created_by, 
-                    ":id" => $id
-                ]
-            );
+        $statement->execute(
+            [
+                ":title" => $title,
+                ":description" => $description,
+                ":category" => $category,
+                ":created_by" => $created_by, 
+                ":id" => $id
+            ]
+        );
         
     }
 
