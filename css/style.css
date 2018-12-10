@@ -395,8 +395,16 @@ label {
 }
 
 .radio_wrapper {
-    color: white;
+    color:#1C3045;
     margin: 0.5em;
+    
+}
+
+.radio_wrapper p{
+    color:#1C3045;
+    margin: 0.5em;
+    font-weight: bold;
+    
 }
 
 .login_and_registration_error_message {
@@ -428,6 +436,36 @@ label {
 .submit_comments:hover {
     background-color:#90bbb8;
 }
+/* create_post_view */
+
+.card {
+    border-radius: 1em;
+    border: none;
+  
+}
+
+.view_logo_post {
+    margin-bottom: 2em;
+    margin-top: 1em;
+    width: 40vw;
+
+}
+
+.remove_picture_button {
+    font-size: 0.8em;
+    padding-left: 1em;
+    color:#A6C9C6;
+}
+
+.label_block {
+    color: #1C3045;
+}
+
+.create_post_button {
+    background-color: #A6C9C6; 
+    color: white;
+}
+
 
 /* comment_view */
 
@@ -446,8 +484,6 @@ label {
     max-width: 30px;
     height: auto;
 }
-
-
 
 /* about_us */
 
@@ -550,7 +586,6 @@ footer p {
         margin-right: 5em;
     }
 
-    
      
     .navbar_dropdown {
         position: relative;
@@ -597,6 +632,21 @@ footer p {
         max-width: 60%;
     }
 
+    /* create_post_view */
+
+    .card {
+        border-radius: 1em;
+        padding: 0 2em;
+        border: none;
+  
+    }
+
+    .view_logo_post {
+        margin-bottom: 2em;
+        width: 30vw;
+
+    }
+
 }
 
 
@@ -617,6 +667,21 @@ footer p {
 
     .post_card_description {
         max-width: 50em;
+    }
+
+      /* create_post_view */
+
+      .card {
+        border-radius: 1em;
+        padding: 0 3em;
+        border: none;
+      
+    }
+    
+    .view_logo_post {
+        margin-bottom: 2em;
+        width: 20vw;
+    
     }
 }
 
