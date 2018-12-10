@@ -4,6 +4,7 @@ include 'config.php';
 include 'includes/head.php';
 include 'includes/database_connection.php';
 include 'classes/post.php';
+include 'classes/comment.php';
 
 if(isset($_SESSION['is_logged_in'])){
     if($_SESSION['is_logged_in'] === false){
