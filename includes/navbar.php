@@ -38,9 +38,9 @@
     </div>
     <div class="icons">
         <div class="icons_wrapper">
-            <a href=""><img src="http://localhost/doctorfont_project/images/facebook.svg" alt=""></a>
-            <a href=""><img src="http://localhost/doctorfont_project/images/instagram.svg" alt=""></a>
-            <a href=""><img src="http://localhost/doctorfont_project/images/twitter.svg" alt=""></a>
+            <a href=""><img src="<?=$ROOT_URL?>/images/facebook.svg" alt=""></a>
+            <a href=""><img src="<?=$ROOT_URL?>/images/instagram.svg" alt=""></a>
+            <a href=""><img src="<?=$ROOT_URL?>/images/twitter.svg" alt=""></a>
         </div>
         
         <button type="button" class="btn btn-outline-light button_logout"><a href="<?= $ROOT_URL ?>/includes/logout.php" id="">Logga ut</a></button>

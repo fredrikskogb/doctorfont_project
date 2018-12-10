@@ -400,8 +400,9 @@ label {
 }
 
 .login_and_registration_error_message {
-    color: white;
-    margin: 0.5em;
+   color: #1C3045;
+   margin: 0 0.5em;
+   font-weight: bold;
 }
 
 /* comments_form */
