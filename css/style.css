@@ -400,9 +400,8 @@ label {
 }
 
 .login_and_registration_error_message {
-    color: #1C3045;
-    margin: 0 0.5em;
-    font-weight: bold;
+    color: white;
+    margin: 0.5em;
 }
 
 /* comments_form */
@@ -640,12 +639,11 @@ footer p {
 }
 
 #file {
+    font-family: 'Open Sans', sans-serif;
     color: white;
 }
 
 #description {
     height: 150px;
     margin: 0.5em;
-}
-
 }

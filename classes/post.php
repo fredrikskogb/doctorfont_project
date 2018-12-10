@@ -17,6 +17,18 @@ class Post implements publication {
 
     public function create($title, $image, $description, $category){
 
+        // If input is empty on create_post.php, create a session to use on displaying error.
+
+        
+            $_SESSION['title'] = true;
+        
+        
+        
+            $_SESSION['description'] = true;
+        
+
+        // Make it possible to make post with or without image.
+
         $created_by = $_SESSION['user_id'];
 
         $temporary_location = $image['tmp_name'];
@@ -38,7 +50,18 @@ class Post implements publication {
             ":created_by" => $created_by
          ]);
 
-    }
+        }else{
+            $statement = $this->pdo->prepare("INSERT INTO posts (title, image, description, category, created_by)
+            VALUES (:title, :image, :description, :category, :created_by)");
+
+            $statement->execute([
+                ":title" => $title,
+                ":image" => false,
+                ":description" => $description,
+                ":category" => $category,
+                ":created_by" => $created_by
+            ]);
+            }
 }
 
 
@@ -52,6 +75,19 @@ class Post implements publication {
         );
 
         header("Location: ../index.php");
+
+    }
+
+    public function deleteImage($id){
+        $statement = $this->pdo->prepare("UPDATE posts SET image = false WHERE id = :id");
+
+        $statement->execute(
+            [
+                ":id" => $id
+            ]
+        );
+
+        header("Location: $ROOT_URL/doctorfont_project/views/create_post_view.php?update_post=$id");
 
     }
 
@@ -77,7 +113,23 @@ class Post implements publication {
                 ]
             );
         }
-        header("Location: ../index.php");
+    }
+
+    public function updateKeepImage($title, $description, $category, $created_by, $id){
+
+        
+            $statement = $this->pdo->prepare("UPDATE posts SET title = :title, description = :description, category = :category, created_by = :created_by WHERE id = :id");
+
+            $statement->execute(
+                [
+                    ":title" => $title,
+                    ":description" => $description,
+                    ":category" => $category,
+                    ":created_by" => $created_by, 
+                    ":id" => $id
+                ]
+            );
+        
     }
 
     public function getAllPosts(){

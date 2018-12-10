@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../includes/head.php';
 
 if(isset($_GET['update_post'])){
@@ -36,12 +37,27 @@ if(isset($_GET['update_post'])){
 
                     <label for="title">Titel</label>
                     <input type="text" placeholder="Titel..." name="title" id="title" value="<?php if(isset($placeholder)){echo $placeholder['title'];} ?>">
+                    <?php
+                        if(isset($_SESSION['title'])){
+                            if($_SESSION['title'] === false){?>
+                                <p class="login_and_registration_error_message">Titel ej ifyllt.</p>
+                            <?php }
+                        }
+                    ?>
 
                     <label for="file">Fil</label>
                     <input type="file" name="image" id="file">
+                    <a href="../includes/remove_image.php?remove_image=<?=$_GET["update_post"];?>">Ta bort bild</a>
 
                     <label for="summernote">Beskrivning</label>
                     <textarea type="text" placeholder="Beskrivning..." name="description" id="summernote"><?php if(isset($placeholder)){echo $placeholder['description'];} ?></textarea>
+                    <?php
+                        if(isset($_SESSION['description'])){
+                            if($_SESSION['description'] === false){?>
+                                <p class="login_and_registration_error_message">Beskrivning ej ifyllt.</p>
+                            <?php }
+                        }
+                    ?>
 
                     <div class="radio_wrapper">
                         <p>Välj kategori:</p>

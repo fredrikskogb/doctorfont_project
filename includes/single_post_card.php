@@ -7,9 +7,15 @@
     
     <h2 class="post_card_title"><?=$post->fetched_post['title'];?></h2>
     <p class="post_card_date"><?=$date;?></p>
-    <div class="post_card_image_frame">
-        <img class="post_card_image" src="<?= $post->fetched_post['image'];?>" alt="Bild för inlägget <?=$post->fetched_post['title'];?>">
-    </div>
+
+
+        <?php if($post->fetched_post['image'] != false){ ?>
+            <div class="post_card_image_frame">
+                <img class="post_card_image" src="<?= $post->fetched_post['image'];?>" alt="Bild för inlägget <?=$post->fetched_post['title'];?>">
+            </div>
+        <?php } ?>
+        
+
     <div class="post_card_description">
         <?=$post->fetched_post["description"];?>
     </div>
