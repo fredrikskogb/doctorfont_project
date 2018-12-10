@@ -276,7 +276,16 @@ label {
 }
 .link_all_comments a {
     color: gray;
-    
+}
+
+#comment_date{
+    color: grey;
+    font-size: 0.7em;
+    margin-bottom: 1.5em;
+}
+
+.comment_info {
+    margin-bottom: 0.5em;
 }
 
 /* login, register, create */
