@@ -19,17 +19,13 @@ class Post implements publication {
 
         // If input is empty on create_post.php, create a session to use on displaying error.
 
-        if(strlen($title) < 1){
-            $_SESSION['title'] = false;
-        } else{
-            $_SESSION['title'] = true;
-        }
         
-        if(strlen($description) < 1){
-            $_SESSION['description'] = false;
-        } else{
+            $_SESSION['title'] = true;
+        
+        
+        
             $_SESSION['description'] = true;
-        }
+        
 
         // Make it possible to make post with or without image.
 
