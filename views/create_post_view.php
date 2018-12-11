@@ -26,12 +26,9 @@ if(isset($_GET['update_post'])){
 
 <body class="body_view">
     <main class="main_login_register">
-        <div class="image_container">
-            <img class="view_logo_post view_logo_create" src="../images/logo_dark.png" alt="millhouse">
-        </div>
+       
         <div class="form_container card">
             <div>
-    
 
                 <form class="form_views create_views_container" action="<?php if(isset($_GET['update_post'])){echo '../includes/update_post.php';}
                 else{echo '../includes/create_post.php';}?>" method="POST" enctype="multipart/form-data">
@@ -47,7 +44,7 @@ if(isset($_GET['update_post'])){
                     ?>
 
                     <label for="file">Fil</label>
-                    <input type="file" class="choose_file" name="image" id="file">
+                    <input type="file" name="image" id="file">
                     <a class="remove_picture_button"href="../includes/remove_image.php?remove_image=<?=$_GET["update_post"];?>">Ta bort bild</a>
 
                     <label for="summernote">Beskrivning</label>
@@ -99,7 +96,7 @@ if(isset($_GET['update_post'])){
                     <input type="hidden" name="id" value="<?=$_GET['update_post']?>">
 
                     <input type="submit" value="<?php if(isset($_GET['update_post'])){echo 'Uppdatera';}
-                else{echo 'Lägg till';}?>" class="submit create_post_button">
+                else{echo 'Lägg till';}?>" class="submit create_">
                     <script>
                         $(document).ready(function() {
                         $('#summernote').summernote();
