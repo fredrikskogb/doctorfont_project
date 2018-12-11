@@ -6,11 +6,7 @@
 <div class="post_card">
     
     <h2 class="post_card_title"><?=$post["title"];?></h2>
-    <?php
-        if($_SESSION['is_admin'] === true){?>
-            <a href="views/create_post_view.php?update_post=<?=$post['id']?>" class="edit_post">Redigera inlägg</a>
-            <a href="includes/delete_post.php?remove_post=<?=$post['id']?>" class="edit_post">Ta bort inlägg</a>
-        <?php } ?>
+    
     <p class="post_card_date"><?=$date;?></p>
 
     <?php
@@ -24,6 +20,12 @@
     <div class="post_card_description">
         <?=$post["description"];?>
     </div>
+
+    <?php
+        if($_SESSION['is_admin'] === true){?>
+            <a href="views/create_post_view.php?update_post=<?=$post['id']?>" class="edit_post">Redigera inlägg</a>
+            <a href="includes/delete_post.php?remove_post=<?=$post['id']?>" class="edit_post">Ta bort inlägg</a>
+    <?php } ?>
 
     <div class="link_all_comments">
     <a href="views/comment_view.php?post=<?=$post['id']?>">Visa alla kommentarer(<?php include "includes/fetch_number_of_comments.php";?>)</a>

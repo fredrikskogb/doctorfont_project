@@ -36,7 +36,10 @@
         </div>
        
     </div>
+
+
     <div class="icons">
+
         <div class="icons_wrapper">
             <a href=""><img src="<?=$ROOT_URL?>/images/facebook.svg" alt=""></a>
             <a href=""><img src="<?=$ROOT_URL?>/images/instagram.svg" alt=""></a>
