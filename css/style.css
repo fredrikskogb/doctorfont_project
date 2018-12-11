@@ -273,6 +273,8 @@ label {
 
 .edit_post {
     margin: 0 1em 0 1em;
+    color: rgb(163, 163, 163);
+    text-decoration: underline;
 }
 .link_all_comments a {
     color: gray;
