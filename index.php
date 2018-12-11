@@ -18,6 +18,7 @@ if(isset($_SESSION['is_logged_in'])){
 
 ?>
 <title>Millhouse Blog</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
@@ -26,14 +27,13 @@ if(isset($_SESSION['is_logged_in'])){
         <?php 
         include 'includes/navbar.php';
         include 'includes/hero_image.php';
-        ?>
 
-        <?php
-        if($_SESSION['is_admin'] === true){?>
-        <a href="views/create_post_view.php" class="new_post">Skapa nytt inlägg</a>
+        
+            if($_SESSION['is_admin'] === true){?>
+            <a href="views/create_post_view.php" class="new_post"><i class="fa fa-edit"></i></a>
 
-        <?php }
-
+        <?php } 
+        
         $all_posts = new Post($pdo);
         $all_posts->getAllPosts();
         
