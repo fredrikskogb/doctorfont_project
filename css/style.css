@@ -193,7 +193,7 @@ label {
 
 #hero_image_arrow {
     display: block;
-    margin: 15vh auto 0 auto;
+    margin: 10vh auto 0 auto;
     color: white;
     max-width: 17%;
     height: auto;
@@ -237,8 +237,7 @@ label {
 
 .post_card_title {
     font-size: 1.6em;
-    margin-bottom: 1em;
-    
+    margin-bottom: 1em;   
 }
 
 .post_card_image {
@@ -289,6 +288,7 @@ label {
 
 .link_all_comments a {
     color: gray;
+
 }
 
 #comment_date{
@@ -303,32 +303,21 @@ label {
 
 /* login, register, create */
 
-.body_view::after {
-    background-image: url("../images/heder_millhouse.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    object-fit: cover;
-    content: "";
-    opacity: 0.4;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-  }
 
+  .body_view{
+    background-image: none;
+    background-color: white;
+}
 
 .main_login_register {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     margin: 0 auto;
-    right: 0;
-    left: 0;
+   
+}
+
+.create_post {
+    margin-top: 3em;
 }
 
 .image_container {
@@ -336,6 +325,7 @@ label {
 }
 
 .view_logo {
+    margin-top: 3em;
     width: 55vw;
     margin-bottom: 4em;
     filter: drop-shadow(1px 1px 0 lightgray) 
@@ -359,15 +349,11 @@ label {
     drop-shadow(-0.3px -0.3px 0 lightgray);
 }
 
-
-
 .form_views {
     display: flex;
     flex-direction: column;
-    width: 20em;
+    max-width: 15em;
     margin-top: 2em;
-    
-    
 }
 
 .form_views input {
@@ -395,6 +381,7 @@ label {
 
 .note-editor {
     margin: 0.5em;
+    max-width: 100%;
 }
 
 .href_views {
@@ -439,7 +426,7 @@ label {
 
 .form_views_comments {
     margin: 0 auto;
-    width: 80%;
+    max-width: 80%;
 }
 
 .comment {
@@ -464,13 +451,6 @@ label {
     border-radius: 1em;
     border: none;
   
-}
-
-.view_logo_post {
-    margin-bottom: 2em;
-    margin-top: 1em;
-    width: 40vw;
-
 }
 
 .remove_picture_button {
@@ -554,6 +534,25 @@ footer {
 footer p {
     font-size: 0.8em;
 }
+@media screen and (min-width: 300px){
+      
+.body_view::after {
+    background-image: url("../images/heder_millhouse.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    content: "";
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+
+    }
+}
 
 @media screen and (min-width: 480px){
 
@@ -565,6 +564,12 @@ footer p {
         display: block;
     }
 
+    .form_views {
+
+        max-width: 30em;
+       
+    }
+    
 }
 
 @media screen and (min-width: 768px){
@@ -651,7 +656,7 @@ footer p {
     }
 
     .hero_image_frame img {
-        max-width: 60%;
+        max-width: 50%;
     }
 
     /* create_post_view */
@@ -663,10 +668,8 @@ footer p {
   
     }
 
-    .view_logo_post {
-        margin-bottom: 2em;
-        width: 30vw;
-
+    .form_views {
+        max-width: 30em;
     }
 
 }
@@ -699,11 +702,12 @@ footer p {
         border: none;
       
     }
-    
-    .view_logo_post {
-        margin-bottom: 2em;
-        width: 20vw;
-    
+    .note-editor {
+        max-width: 100%;
+    }
+
+    .form_views {
+        max-width: 50em;
     }
 }
 
@@ -724,6 +728,16 @@ footer p {
 
 }
 
+}
+
+@media screen and (max-width: 992px) and (orientation : landscape){
+    .hero_image_frame img{
+        max-width: 50%;
+    }
+    #hero_image_arrow{
+        max-width: 10%;
+    }
+    
 }
 
 #file {

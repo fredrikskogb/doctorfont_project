@@ -25,7 +25,7 @@ if(isset($_GET['update_post'])){
 </head>
 
 <body class="body_view">
-    <main class="main_login_register">
+    <main class="main_login_register create_post">
        
         <div class="form_container card">
             <div>
