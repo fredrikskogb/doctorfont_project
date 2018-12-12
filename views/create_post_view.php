@@ -58,14 +58,14 @@ if(isset($_GET['update_post'])){
                     ?>
 
                     <div class="radio_wrapper">
-                        <p>Välj kategori:</p>
+                        <p>VÄLJ KATEGORI:</p>
 
                         <div>
                             <input type="radio" name="category" value="solglasögon" 
                             <?php if(isset($placeholder['category'])){
                                     if($placeholder['category'] == "solglasögon")
                                     {?> checked <?php ;}} else{?> checked <?php } ?>>
-                            <label for="huey" class="label_block">Solglasögon</label>
+                            <label for="huey" class="label_block">SOLGLASÖGON</label>
                         </div>
 
                         <div>
@@ -73,7 +73,7 @@ if(isset($_GET['update_post'])){
                             <?php if(isset($placeholder['category'])){
                                     if($placeholder['category'] == "inredningsartiklar")
                                     {?> checked <?php ;}} ?> >
-                            <label for="dewey" class="label_block">Inredningsartiklar</label>
+                            <label for="dewey" class="label_block">INREDNINGSARTIKLAR</label>
                         </div>
 
                         <div>
@@ -81,7 +81,7 @@ if(isset($_GET['update_post'])){
                             <?php if(isset($placeholder['category'])){
                                     if($placeholder['category'] == "klockor")
                                     {?> checked <?php ;}} ?> >
-                            <label for="louie" class="label_block">Klockor</label>
+                            <label for="louie" class="label_block">KLOCKOR</label>
                         </div>
                         
                         <div>
@@ -89,14 +89,14 @@ if(isset($_GET['update_post'])){
                             <?php if(isset($placeholder['category'])){
                                     if($placeholder['category'] == "mode")
                                     {?> checked <?php ;}} ?>>
-                            <label for="louie" class="label_block">Mode</label>
+                            <label for="louie" class="label_block">MODE</label>
                         </div>
                     </div>
 
                     <input type="hidden" name="id" value="<?=$_GET['update_post']?>">
 
                     <input type="submit" value="<?php if(isset($_GET['update_post'])){echo 'Uppdatera';}
-                else{echo 'Lägg till';}?>" class="submit create_">
+                else{echo 'Lägg till';}?>" class="submit create_post_button">
                     <script>
                         $(document).ready(function() {
                         $('#summernote').summernote();
