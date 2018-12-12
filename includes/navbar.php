@@ -2,8 +2,8 @@
 <nav class="navbar">
         <ul class="navbar_linklist">
 
-        <button type="button" class="btn btn-outline-light button"> <li><a href="<?= $ROOT_URL ?>/index.php">Hem</a></li></button>
-        <button type="button" class="btn btn-outline-light button"><li><a href="<?= $ROOT_URL ?>/views/about_us_view.php#about_us_link">Om oss</a></li></button>
+        <a class="btn btn-outline-light button" href="<?= $ROOT_URL ?>/index.php">Hem</a>
+        <a class="btn btn-outline-light button" href="<?= $ROOT_URL ?>/views/about_us_view.php#about_us_link">Om oss</a>
          <li class="navbar_dropdown">
 
                 <button type="button" class="btn btn-outline-light button"><span>Kategorier</span></button>
@@ -24,7 +24,7 @@
                             MENY
                         </a>
                             <div class="dropdown-menu menu_dropdown" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="<?= $ROOT_URL ?>index.php">Hem</a>
+                                <a class="dropdown-item" href="<?= $ROOT_URL ?>/index.php">Hem</a>
                                     <a class="dropdown-item"  href="<?= $ROOT_URL ?>/views/about_us_view.php">Om oss</a>
                                         <a class="dropdown-item" href="<?= $ROOT_URL ?>#">Kategorier</a>
                                     

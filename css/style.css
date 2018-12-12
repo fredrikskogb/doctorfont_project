@@ -688,6 +688,7 @@ footer p {
 
     .button:hover {
         background-color:#90bbb8;
+        color: white;
     }
 
     .button li a {
