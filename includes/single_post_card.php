@@ -1,5 +1,4 @@
 <?php
-
     $date = substr($post->fetched_post['date'], 0, -3);
 ?>
 

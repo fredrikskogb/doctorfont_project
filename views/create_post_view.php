@@ -1,17 +1,17 @@
 <?php
-session_start();
-include '../includes/head.php';
+    session_start();
+    include '../includes/head.php';
 
-if(isset($_GET['update_post'])){
-    include '../includes/database_connection.php';
-    include '../classes/post.php';
-    $edit_post = new Post($pdo);
-    $edit_post->getSinglePost($_GET['update_post']);
-    
-    $placeholder = $edit_post->fetched_post;
-}
-
+    if(isset($_GET['update_post'])){
+        include '../includes/database_connection.php';
+        include '../classes/post.php';
+        $edit_post = new Post($pdo);
+        $edit_post->getSinglePost($_GET['update_post']);
+        
+        $placeholder = $edit_post->fetched_post;
+    }
 ?>
+
 <title>Millhouse - Skapa inlägg</title>
 
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
@@ -22,7 +22,12 @@ if(isset($_GET['update_post'])){
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
 
 <link rel="stylesheet" type="text/css" href="../css/style.css">
+
 </head>
+
+<?php 
+    if($_SESSION["is_admin"] === true){
+?>
 
 <body class="body_view">
     <main class="main_login_register create_post">
@@ -96,7 +101,8 @@ if(isset($_GET['update_post'])){
                     <input type="hidden" name="id" value="<?=$_GET['update_post']?>">
 
                     <input type="submit" value="<?php if(isset($_GET['update_post'])){echo 'Uppdatera';}
-                else{echo 'Lägg till';}?>" class="submit create_post_button">
+                    else{echo 'Lägg till';}?>" class="submit create_post_button">
+
                     <script>
                         $(document).ready(function() {
                         $('#summernote').summernote();
@@ -107,3 +113,8 @@ if(isset($_GET['update_post'])){
         </div>
     </main>
 </body>
+<?php
+    }else{
+        header("Location: ../index.php");
+    }
+?>

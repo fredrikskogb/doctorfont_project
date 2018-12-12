@@ -3,6 +3,7 @@
 include 'interface.php';
 
 class Post implements publication {
+
     private $pdo;
 
     public $fetched_posts;
@@ -10,6 +11,7 @@ class Post implements publication {
     public $fetched_post;
 
     public $fetched_category;
+
 
     public function __construct($pdo){
         $this->pdo = $pdo;
@@ -57,12 +59,20 @@ class Post implements publication {
                 ":category" => $category,
                 ":created_by" => $created_by
             ]);
-            }
-}
+        }
+    }
 
 
     public function delete($delete){
         $statement = $this->pdo->prepare("DELETE FROM posts WHERE id = :id");
+
+        $statement->execute(
+            [
+                ":id" => $delete
+            ]
+        );
+
+        $statement = $this->pdo->prepare("DELETE FROM comments WHERE post_id = :id");
 
         $statement->execute(
             [
