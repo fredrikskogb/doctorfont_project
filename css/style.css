@@ -184,6 +184,7 @@ label {
 
 .hero_image_frame img{
     vertical-align: bottom;
+    margin-bottom: 50px;
     /*vertical-align: middle;*/
     max-width: 80%;
     max-height: auto;
@@ -193,9 +194,44 @@ label {
 
 #hero_image_arrow {
     display: block;
+    margin: 15vh auto 0 auto;
+    color: white;
+    max-width: 30px;
+    height: auto;
+    animation-name: fallingArrow;
+    animation-duration: 2s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fallingArrow{
+    0%{
+        opacity: 0;
+        top: 0;
+    }
+
+    40%{
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 0;
+        top: 30px;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+
+/*
+#hero_image_arrow {
+    display: block;
     margin: 10vh auto 0 auto;
     color: white;
-    max-width: 17%;
+    max-width: 30px;
     height: auto;
     animation-name: bounceArrow;
     animation-duration: 0.5s;
@@ -218,7 +254,7 @@ label {
         top: 20px;
     }
 }
-
+*/
 .new_post {
     position: absolute;
     top: 102vh;
@@ -569,6 +605,10 @@ footer p {
         max-width: 30em;
        
     }
+
+    .hero_image_frame img{
+        margin-bottom: 0px;
+    }
     
 }
 
@@ -733,9 +773,6 @@ footer p {
 @media screen and (max-width: 992px) and (orientation : landscape){
     .hero_image_frame img{
         max-width: 50%;
-    }
-    #hero_image_arrow{
-        max-width: 10%;
     }
     
 }
