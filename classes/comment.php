@@ -1,13 +1,14 @@
 <?php
 
 class Comment {
+
     private $pdo;
     public $fetched_comments;
 
     public function __construct($pdo){
         $this->pdo = $pdo;
 
-}
+    }
 
     public function create($content, $post_id, $created_by) {
 
@@ -50,4 +51,5 @@ class Comment {
         );
 
     }
+    
 }

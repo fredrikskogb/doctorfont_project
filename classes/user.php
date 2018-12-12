@@ -62,11 +62,7 @@ class User
             header('Location: ../views/register_view.php');
             exit();
         }
-/*
-        if($_SESSION['taken_username'] || $_SESSION['taken_email']){
-            header('Location: ../views/register_view.php');
-        }
-*/
+
         //Registering user data in database.
 
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -115,5 +111,4 @@ class User
         }
     }
 
-    
 }
