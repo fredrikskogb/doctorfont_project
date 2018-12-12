@@ -72,6 +72,14 @@ class Post implements publication {
             ]
         );
 
+        $statement = $this->pdo->prepare("DELETE FROM comments WHERE post_id = :id");
+
+        $statement->execute(
+            [
+                ":id" => $delete
+            ]
+        );
+
         header("Location: ../index.php");
 
     }
