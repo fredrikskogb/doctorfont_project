@@ -6,6 +6,10 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
+<?php 
+    if($_SESSION["username"]){
+?>
+
 <body class="about_us_container">
 
     <?php
@@ -43,3 +47,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </html>
+
+<?php
+    }else{
+        header("Location: login_view.php");
+    }
+?>

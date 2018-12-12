@@ -8,11 +8,11 @@
 
     if(isset($_SESSION['is_logged_in'])){
         if($_SESSION['is_logged_in'] === false){
-            header('Location: views/login_view.php');
+            header('Location: login_view.php');
             exit();
         }
     } else{
-        header('Location: views/login_view.php');
+        header('Location: login_view.php');
         exit();
     }
 ?>
