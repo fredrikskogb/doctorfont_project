@@ -1,68 +1,66 @@
 <?php
-session_start();
-include 'config.php';
-include 'includes/head.php';
-include 'includes/database_connection.php';
-include 'classes/post.php';
-include 'classes/comment.php';
+    session_start();
+    include 'config.php';
+    include 'includes/head.php';
+    include 'includes/database_connection.php';
+    include 'classes/post.php';
+    include 'classes/comment.php';
 
-if(isset($_SESSION['is_logged_in'])){
-    if($_SESSION['is_logged_in'] === false){
+    if(isset($_SESSION['is_logged_in'])){
+        if($_SESSION['is_logged_in'] === false){
+            header('Location: views/login_view.php');
+            exit();
+        }
+    }else{
         header('Location: views/login_view.php');
         exit();
     }
-} else{
-    header('Location: views/login_view.php');
-    exit();
-}
-
 ?>
+
 <title>Millhouse Blog</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
-
 </head>
+
     <body>
         <?php 
-        include 'includes/navbar.php';
-        include 'includes/hero_image.php';
 
+            include 'includes/navbar.php';
+            include 'includes/hero_image.php';
         
             if($_SESSION['is_admin'] === true){?>
             <a href="views/create_post_view.php" class="new_post"><i class="fa fa-edit"></i></a>
 
         <?php } 
         
-        $all_posts = new Post($pdo);
-        $all_posts->getAllPosts();
-        
-        /* If category is not set, display all posts
-         * Else if category is set, display set category
-         * If there are no posts in that category, display error text
-        */ 
-        if(!isset($_GET["category"])){
-            foreach($all_posts->fetched_posts as $post){
-                include 'includes/post_card.php';
+            $all_posts = new Post($pdo);
+            $all_posts->getAllPosts();
+            
+            /* If category is not set, display all posts
+            * Else if category is set, display set category
+            * If there are no posts in that category, display error text
+            */ 
+            if(!isset($_GET["category"])){
+                foreach($all_posts->fetched_posts as $post){
+                    include 'includes/post_card.php';
+                }
+            }elseif(isset($_GET["category"])){
+                $posts_category = new Post($pdo);
+                $posts_category->getSingleCategory($_GET["category"]);
+                foreach($posts_category->fetched_category as $post){
+                    include 'includes/post_card.php';
+                }
+                if(isset($_GET["category"])){
+                    if(!isset($post["title"])){?>
+                        <p class="category_error">Det finns inga inlägg i denna kategori.</p>
+                <?php }
+                }
             }
-        }elseif(isset($_GET["category"])){
-            $posts_category = new Post($pdo);
-            $posts_category->getSingleCategory($_GET["category"]);
-            foreach($posts_category->fetched_category as $post){
-                include 'includes/post_card.php';
-            }
-            if(isset($_GET["category"])){
-                if(!isset($post["title"])){?>
-                <p class="category_error">Det finns inga inlägg i denna kategori.</p>
-            <?php }
-            }
-        }
 
-        include 'includes/footer.php';
+            include 'includes/footer.php';
         ?>
 
-
-        
     </body>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,23 +1,25 @@
 <?php
-//session_destroy();
-session_start();
-include '../includes/head.php';
+    session_start();
+    include '../includes/head.php';
 ?>
+
 <title>Millhouse - Registrera</title>
 <link rel="stylesheet" type="text/css" href="../css/style.css">
+
 </head>
+
 <body class="body_view">
     <main class="main_login_register">
+        
         <div class="image_container">
             <img class="view_logo" src="../images/logo_dark.png" alt="millhouse">
         </div>
 
         <div class="about_us_login_and_register">
-
-        <p> Millhouse är ett grossistföretag som säljer kläder, 
-        accesoarer och mindre inredningsartiklar till mode- och livsstilsbutiker.</p>
-
+            <p> Millhouse är ett grossistföretag som säljer kläder, 
+            accesoarer och mindre inredningsartiklar till mode- och livsstilsbutiker.</p>
         </div>
+
         <div class="form_container">
             <div>
                 <form class="form_views" action="../includes/register.php" method="post">
