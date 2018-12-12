@@ -25,6 +25,10 @@
 
 </head>
 
+<?php 
+    if($_SESSION["is_admin"] === true){
+?>
+
 <body class="body_view">
     <main class="main_login_register create_post">
        
@@ -108,3 +112,8 @@
         </div>
     </main>
 </body>
+<?php
+    }else{
+        header("Location: ../index.php");
+    }
+?>
