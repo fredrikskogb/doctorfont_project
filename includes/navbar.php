@@ -3,7 +3,7 @@
         <ul class="navbar_linklist">
 
         <button type="button" class="btn btn-outline-light button"> <li><a href="<?= $ROOT_URL ?>/index.php">Hem</a></li></button>
-        <button type="button" class="btn btn-outline-light button"><li><a href="<?= $ROOT_URL ?>/views/about_us_view.php">Om oss</a></li></button>
+        <button type="button" class="btn btn-outline-light button"><li><a href="<?= $ROOT_URL ?>/views/about_us_view.php#about_us_link">Om oss</a></li></button>
          <li class="navbar_dropdown">
 
                 <button type="button" class="btn btn-outline-light button"><span>Kategorier</span></button>

@@ -24,22 +24,22 @@ if(isset($_SESSION['is_logged_in'])){
 </head>
     <body>
         <?php 
-        include '../includes/navbar.php';
-        include '../includes/hero_image.php';
-        $post = new Post($pdo);
-        $post->getSinglePost($_GET['post']);
-        $_POST['post_id'] = $_GET['post'];          
+            include '../includes/navbar.php';
+            include '../includes/hero_image.php';
+            $post = new Post($pdo);
+            $post->getSinglePost($_GET['post']);
+            $_POST['post_id'] = $_GET['post'];          
 
-        $comment = new Comment($pdo);
-        $comment->getComment($_POST['post_id']);
+            $comment = new Comment($pdo);
+            $comment->getComment($_POST['post_id']);
         ?>
         <div class="single_post_container">
-        <?php
-        include '../includes/single_post_card.php';
-        include '../includes/all_comments.php';
-        include '../includes/comment_form.php';
-        include '../includes/footer.php';
-        ?>
+            <?php
+                include '../includes/single_post_card.php';
+                include '../includes/all_comments.php';
+                include '../includes/comment_form.php';
+                include '../includes/footer.php';
+            ?>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

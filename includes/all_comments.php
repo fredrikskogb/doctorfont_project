@@ -1,4 +1,4 @@
-<div class="single_comment_container">
+<div class="single_comment_container" id="comment">
 <?php
 foreach($comment->fetched_comments as $single_fetched_comment){
     ?><div class="single_comment">

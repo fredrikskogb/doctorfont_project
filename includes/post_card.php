@@ -28,7 +28,7 @@
     <?php } ?>
 
     <div class="link_all_comments">
-    <a href="views/comment_view.php?post=<?=$post['id']?>">Visa alla kommentarer(<?php include "includes/fetch_number_of_comments.php";?>)</a>
+    <a href="views/comment_view.php?post=<?=$post['id']?>#comment">Visa alla kommentarer(<?php include "includes/fetch_number_of_comments.php";?>)</a>
     </div>
 
     <hr class="post_card_border">
