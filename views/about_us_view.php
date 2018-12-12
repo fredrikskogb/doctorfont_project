@@ -13,7 +13,7 @@ include '../includes/head.php';
     ?>
 
 
-        <main class="about_us">
+        <main class="about_us" id="about_us_link">
 
             <div class="image_container">
             
