@@ -100,7 +100,7 @@ label {
 
 .navbar_dropdown_content a {
     display: block;
-    padding: 0.3em;
+    padding: 0.5em;
     font-size: 0.8em;
 }
 
@@ -166,6 +166,7 @@ label {
     background-position: center center;
     object-fit: cover;
     text-align: center;
+    margin-bottom: 2em;
 }
 
 .hero_image_inline_helper {
@@ -219,15 +220,15 @@ label {
 
 /* Edit post symbol */
 .new_post {
-    position: absolute;
-    top: 102vh;
-    right: 0.5em;
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #1C3045;
 }
 
 .new_post:hover {
+    font-size: 2.6em;
     color: #1C3045;
 }
 
@@ -374,6 +375,7 @@ label {
 
 .create_views_container {
     width: 25em;
+    padding-bottom: 1em;
 }
 
 
@@ -462,7 +464,7 @@ label {
 .remove_picture_button {
     font-size: 0.8em;
     padding-left: 1em;
-    color:#A6C9C6;
+    color:#1C3045;
 }
 
 .label_block {
@@ -472,6 +474,7 @@ label {
 .create_post_button {
     background-color: #A6C9C6; 
     color: white;
+    padding: 0.2em;
 }
 
 .create_post_button:hover {
@@ -577,11 +580,11 @@ footer p {
     }
 
     .hero_image_frame img{
-        margin-bottom: 0px;
+        margin-bottom: 1em;
     }
 
     .hero_image_frame{
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     }
     
 }
@@ -677,16 +680,12 @@ footer p {
 
     /* Edit post symbol */
     .new_post {
-        position: absolute;
-        top: 102vh;
-        right: 0.5em;
-        text-align: center;
-        font-size: 2.5em;
+        font-size: 3em;
         color: #1C3045;
     }
 
     .new_post:hover {
-        font-size:2.6em;
+        font-size: 3.1em;
         color: #1C3045;
     }
 
@@ -769,7 +768,7 @@ footer p {
 
 #file {
     font-family: 'Open Sans', sans-serif;
-    color: white;
+    color: black;
 }
 
 #description {
