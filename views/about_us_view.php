@@ -23,7 +23,7 @@
         <div class="image_container">
             
             <div class="col-12 heading">
-                <h1>OM OSS</h1>
+                <h2>OM OSS</h2>
             </div>
 
             <div class="text_about_us">
@@ -34,6 +34,11 @@
                              Och kände att vi ville ha ett sätt uppdatera nyhter och inspration på, och då tycker vi att ett bloggforum är ett roligt sätt att presentera det på.</p><br /> 
                 <p>  Vi kommer lägga upp inlägg på artiklar som klockor - solglasögon - mindre inredningsartiklar där ni kan vara med att kommentera och ge era önskemål på.</p><br /> 
             </div>
+
+            <div class="contact">
+                <h3>KONTAKTA OSS</h3>
+                <p>millhouse@gmail.com</p><br /> 
+            </div>       
         </div>        
     </main>               
             

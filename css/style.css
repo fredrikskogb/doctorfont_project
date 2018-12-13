@@ -513,9 +513,9 @@ label {
     margin: 0 auto;    
 }
 
-.heading h1 {
+.heading h2 {
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
     
 }
@@ -525,6 +525,15 @@ label {
     font-size: 1rem;
     margin: 0 auto;
     width: 50vw;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.contact h3 {
+    font-weight: bold;
 }
 
 /* creat_footer */
