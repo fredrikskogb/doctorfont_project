@@ -1,13 +1,4 @@
-
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 /* CSS reset */
-
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -225,37 +216,6 @@ label {
         opacity: 0;
     }
 }
-
-
-/*
-#hero_image_arrow {
-    display: block;
-    margin: 10vh auto 0 auto;
-    color: white;
-    max-width: 30px;
-    height: auto;
-    animation-name: bounceArrow;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
-    position: relative;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-play-state: paused;
-}
-
-#hero_image_arrow:hover {
-    animation-play-state: running;
-}
-
-@keyframes bounceArrow{
-    0%{
-        top: 0;
-    }
-    100%{
-        top: 20px;
-    }
-}
-*/
 
 /* Edit post symbol */
 .new_post {
