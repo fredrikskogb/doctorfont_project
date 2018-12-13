@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include '../config.php';
     include '../includes/head.php';
 ?>
@@ -7,7 +8,7 @@
 </head>
 
 <?php 
-    if($_SESSION["username"]){
+    if(isset($_SESSION["username"])){
 ?>
 
 <body class="about_us_container">
