@@ -26,15 +26,21 @@
                             <div class="dropdown-menu menu_dropdown" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="<?= $ROOT_URL ?>/index.php">HEM</a>
                                     <a class="dropdown-item"  href="<?= $ROOT_URL ?>/views/about_us_view.php#about_us_link">OM OSS</a>
-                                        <a class="dropdown-item" href="<?= $ROOT_URL ?>#">KATEGORIER</a>
-                                    
+                                    <a class="nav-link dropdown-toggle button dropdown-item" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            KATEGORIER
+                        </a>
+                        <div class="dropdown-menu menu_dropdown" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="<?= $ROOT_URL ?>/index.php?category=solglasögon">SOLGLASÖGON</a>
+                            <a class="dropdown-item" href="<?= $ROOT_URL ?>/index.php?category=inredningsartiklar">INREDNINGSARTIKLAR</a>
+                            <a class="dropdown-item" href="<?= $ROOT_URL ?>/index.php?category=klockor">KLOCKOR</a>
+                            <a class="dropdown-item" href="<?= $ROOT_URL ?>/index.php?category=mode">MODE</a>
+
                         </div>
                     </li>
                 </ul>
             </div>
             </div>     
         </div>
-       
     </div>
 
 
