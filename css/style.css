@@ -259,6 +259,7 @@ label {
 .new_post {
     display: block;
     margin: 0 auto;
+    width: 2em;
     text-align: center;
     font-size: 2.5em;
     color: #1C3045;
