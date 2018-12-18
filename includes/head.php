@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
+
+<!-- To easily access the css-document from all view-files we finish the head-tag in the file where head-file is included -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

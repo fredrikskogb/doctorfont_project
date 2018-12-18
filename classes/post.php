@@ -35,6 +35,8 @@ class Post implements publication {
 
         $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
+        // If image is chosen, then run this statement
+
         if($upload_ok){
 
         $statement = $this->pdo->prepare("INSERT INTO posts (title, image, description, category, created_by)
@@ -47,6 +49,8 @@ class Post implements publication {
             ":category" => $category,
             ":created_by" => $created_by
          ]);
+
+        // If image is not chosen, then run this statement
 
         }else{
             $statement = $this->pdo->prepare("INSERT INTO posts (title, image, description, category, created_by)
@@ -62,6 +66,7 @@ class Post implements publication {
         }
     }
 
+    // Deletes post with corresponding comments
 
     public function delete($delete){
         $statement = $this->pdo->prepare("DELETE FROM posts WHERE id = :id");
@@ -84,6 +89,8 @@ class Post implements publication {
 
     }
 
+    // Set image to false/delete image, then redirect to updating post
+
     public function deleteImage($id){
         $statement = $this->pdo->prepare("UPDATE posts SET image = false WHERE id = :id");
 
@@ -96,6 +103,8 @@ class Post implements publication {
         header("Location: $ROOT_URL/doctorfont_project/views/create_post_view.php?update_post=$id");
 
     }
+
+    // Update changes on chosen post
 
     public function update($title, $image, $description, $category, $created_by, $id){
 
@@ -125,6 +134,8 @@ class Post implements publication {
         }
     }
 
+    // Used to keep posted image when post is updated
+
     public function updateKeepImage($title, $description, $category, $created_by, $id){
 
         $_SESSION['title'] = true;
@@ -145,6 +156,8 @@ class Post implements publication {
         
     }
 
+    // Fetches all post in chronological order for main page
+
     public function getAllPosts(){
 
         $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY date DESC");
@@ -155,6 +168,8 @@ class Post implements publication {
         $this->fetched_posts = $fetched_posts;
 
     }
+
+    // Fetches all post within a certain category
 
     public function getSingleCategory($category){
 
@@ -170,6 +185,8 @@ class Post implements publication {
         $this->fetched_category = $fetched_category;
 
     }
+
+    // Fetches a single post for commenting-view
 
     public function getSinglePost($id){
 

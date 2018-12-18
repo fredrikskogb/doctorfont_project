@@ -1,4 +1,5 @@
 <?php
+    // Removes seconds from post-date
     $date = substr($post->fetched_post['date'], 0, -3);
 ?>
 

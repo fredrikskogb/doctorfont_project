@@ -3,6 +3,8 @@
 include 'database_connection.php';
 include '../classes/post.php';
 
+//Check if all requirements are met when creating post
+
 if($_POST['title'] === "" || $_POST['description'] === ""){
     if(strlen($_POST["title"]) < 1){
         $_SESSION['title'] = false;

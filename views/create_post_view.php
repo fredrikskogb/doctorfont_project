@@ -2,12 +2,14 @@
     session_start();
     include '../includes/head.php';
 
+    /* This page is used as the create-post-page and also the edit-post-page */
+
     if(isset($_GET['update_post'])){
         include '../includes/database_connection.php';
         include '../classes/post.php';
         $edit_post = new Post($pdo);
         $edit_post->getSinglePost($_GET['update_post']);
-        
+        /* Varible containing all current data of the post you want to edit */
         $placeholder = $edit_post->fetched_post;
     }
 ?>
@@ -24,6 +26,8 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
+
+<!-- If user is not admin the user will not have acces to create/edit-panel -->
 
 <?php 
     if($_SESSION["is_admin"] === true){
