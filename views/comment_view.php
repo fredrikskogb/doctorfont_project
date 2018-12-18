@@ -26,6 +26,9 @@
     <?php 
         include '../includes/navbar.php';
         include '../includes/hero_image.php';
+
+        //Fetches all comments to corresponding post
+
         $post = new Post($pdo);
         $post->getSinglePost($_GET['post']);
         $_POST['post_id'] = $_GET['post'];          

@@ -29,11 +29,12 @@
             include 'includes/navbar.php';
             include 'includes/hero_image.php';
 
+            //Shows "create-post-button" only if logged in user is admin
             if($_SESSION['is_admin'] === true){?>
                 <a href="views/create_post_view.php" class="new_post"><i class="fa fa-edit"></i></a>
 
             <?php }
-        
+
             $all_posts = new Post($pdo);
             $all_posts->getAllPosts();
             

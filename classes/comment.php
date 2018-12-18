@@ -2,6 +2,8 @@
 
 class Comment {
 
+    /* Database connection must be included through constructor to run class */
+
     private $pdo;
     public $fetched_comments;
 
@@ -9,6 +11,8 @@ class Comment {
         $this->pdo = $pdo;
 
     }
+
+    /* Inserts comment into database */
 
     public function create($content, $post_id, $created_by) {
 
@@ -24,7 +28,8 @@ class Comment {
          ]);
         
     }
-  
+    
+    /* Fetches comments belonging to post id */
 
     public function getComment($post_id){
         
@@ -40,6 +45,8 @@ class Comment {
         $this->fetched_comments = $fetched_comments;
 
     }
+
+    /* Deletes comment */
 
     public function deleteComment($comment_id){
 

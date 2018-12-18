@@ -11,6 +11,7 @@
             </div>
 
             <?php
+                // If user is admin or the author of the comment, the user is allowed to delete it.
                 if ($single_fetched_comment['user_id'] == $_SESSION['user_id'] || $_SESSION['is_admin']) {
             ?>
             

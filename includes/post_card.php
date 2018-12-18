@@ -1,5 +1,7 @@
 <?php
+    //Removes character to get the right source for all computers
     $image = substr($post['image'], 3);
+    //Removes second from post-date
     $date = substr($post['date'], 0, -3);
 ?>
 
