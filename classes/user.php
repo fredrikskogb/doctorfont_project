@@ -97,7 +97,8 @@ class User
 
         $is_password_correct = password_verify($password, $fetched_user["password"]);
 
-
+        // Sets username and admin varible
+        
         if($is_password_correct){
             $_SESSION['username'] = $fetched_user['username'];
             $_SESSION['user_id'] = $fetched_user['id'];

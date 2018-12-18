@@ -22,6 +22,8 @@
 
         <div class="form_container">
             <div>
+
+                <!-- Displays error messages if error-varibles are true -->
                 <form class="form_views" action="../includes/register.php" method="post">
                     <label for="username">Användarnamn</label>
                     <input type="text" placeholder="Användarnamn, minst 4 tecken" name="username" id="username">

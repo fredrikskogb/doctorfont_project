@@ -25,7 +25,7 @@
             <div class="form_container">
 
                 <div>
-                    
+                    <!-- Displays error message if error-variable is true -->
                     <form method="POST" class="form_views" action="../includes/login.php">
                         <label for="username">Användarnamn</label>
                         <input type="text" placeholder="Användarnamn" name="username" id="username">
